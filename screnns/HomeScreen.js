@@ -58,11 +58,18 @@ const HomeScreen = () => {
         </View>
         <View style={styles.contenedorseccion1}  >
             <View style={styles.imgseccion1}  >
-            <Image
-         resizeMode="cover"
-        source={{ uri: './assets/presentacion.png' }}
-        style={styles.imgsize2}
-      />
+              <Image
+          resizeMode="cover"
+          source={{ uri: './assets/presentacion.png' }}
+          style={styles.imgsize2}
+        />
+
+            <View> 
+      
+        </View>
+
+     
+
             </View>  
             <View style={styles.singupseccion1}  >
              <Text style={styles.txtgoogle}>
@@ -647,6 +654,86 @@ const styles = StyleSheet.create({
         width: '50vw',
         height: '50vw',       
     },
+    imgsize4:{
+        
+      width: '40vw',
+      height: '20vw',
+      position: 'relative',
+      top: -200,
+      left: 80,       
+  },
+  imgsize5:{
+        
+    width: '20vw',
+    height: '25vw',
+    position: 'relative',
+    borderRadius: '1vw',
+    top: -500,
+    left: 210,
+    backgroundColor: '#000000',
+},
+imgsize6:{
+        
+  width: '15vw',
+  height: '8vw',
+  position: 'relative',
+  borderRadius: '1vw',
+  top: 0,
+  left: 210,
+  backgroundColor: '#000000',
+},
+imgsize7:{
+        
+  width: '15vw',
+  height: '8vw',
+  position: 'relative',
+  borderRadius: '1vw',
+  top: -150,
+  left: 50,
+  backgroundColor: '#000000',
+},
+imgsize8:{
+        
+  width: '15vw',
+  height: '8vw',
+  position: 'relative',
+  borderRadius: '1vw',
+  top: 0,
+  left: 50,
+  backgroundColor: '#000000',
+},
+imgsize9:{
+        
+  width: '15vw',
+  height: '8vw',
+  position: 'relative',
+  borderRadius: '1vw',
+  top: 0,
+  left: 50,
+  backgroundColor: '#000000',
+  zIndex: 1500,
+},
+imgsize10:{
+        
+  width: '15vw',
+  height: '8vw',
+  position: 'relative',
+  borderRadius: '1vw',
+  top: 0,
+  left: 50,
+  backgroundColor: '#000000',
+  zIndex: 1500,
+},
+imgsize11:{
+        
+  width: '25vw',
+  height: '10vw',
+  position: 'relative',
+  borderRadius: '1vw',
+  top: 100,
+  left: 300,
+  
+},
     imgsize3:{
         position: 'relative',
         top: 6,
