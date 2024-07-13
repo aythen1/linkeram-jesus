@@ -6,18 +6,7 @@ const { width } = Dimensions.get('window');
 const TermsandPrivacy = () => {
 
     
-        const [password, setPassword] = useState('');
-        const [showPassword, setShowPassword] = useState(false);
-      
-        const toggleShowPassword = () => {
-          setShowPassword(!showPassword);
-        };
- 
-        const [isChecked, setIsChecked] = useState(false);
-
-        const handleCheck = () => {
-            setIsChecked(!isChecked);
-        };
+               
 
 
         const data = [
@@ -105,7 +94,7 @@ const TermsandPrivacy = () => {
         </View>
 
         </View> 
-
+ 
 
         <View style={styles.correo}>
             <Text style={styles.correobold}>info.linkeram@gmail.com</Text>        
@@ -406,7 +395,7 @@ const styles = StyleSheet.create({
       },
       contenedorseccion2:{
         height: '5%',
-        width: '100%',
+        width: '80vw',
         display: 'flex',
         justifyContent: 'center',        
         flexDirection: 'column',
