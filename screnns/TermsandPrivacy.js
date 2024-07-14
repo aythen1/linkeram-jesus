@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View,ImageBackground, TextInput , TouchableOpacity, Image, Dimensions,CheckBox,ScrollView,FlatList  } from 'react-native'
+import { Text, StyleSheet, View,ImageBackground, TextInput , TouchableOpacity, Image, Dimensions,ScrollView,FlatList  } from 'react-native'
 import React, { Component ,useState} from 'react'
 
 const { width } = Dimensions.get('window');
@@ -222,10 +222,7 @@ const styles = StyleSheet.create({
     tituloart:{
         marginLeft: '3vw',
        
-    },
-    titulopol:{
-        fontSize: 36,
-    },
+    },   
     tituloartbold:{
         marginLeft: '3vw',
         fontWeight: 'bold',
@@ -324,22 +321,6 @@ const styles = StyleSheet.create({
         marginTop: 10,
         paddingTop: 5,
     },
-    btnsesion3: {
-        borderWidth: 1,
-        borderColor:"#CCCCCC",
-        height: 50,
-        width: '25vw',
-        paddingStart: 30,
-        justifyContent: 'center',
-        borderRadius: 5,
-        paddingLeft: 10,
-        paddingRight: 10,
-        marginRight: 50,
-        marginLeft: 50,
-        marginTop: 10,
-        paddingTop: 5,
-        placeholderTextColor:"#C3C3C3",        
-    },
     correobold:{
         color: '#1F184B',
         fontWeight:'bold',
@@ -357,12 +338,7 @@ const styles = StyleSheet.create({
     txtbtn2:{
         color: "#FFFFFF",
         fontWeight: "bold",
-    }, 
-    txtbtn3:{
-        color: "#FFFFFF",
-        fontWeight: "bold",
-        textAlign: 'center',
-    },        
+    },         
     righside: {
         display: 'flex',
         position: 'fixed',
@@ -402,10 +378,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginLeft: '15vw',
         marginTop: '3vw',               
-      },      
-      txtnormalbold:{
-        color: "#1F184B", 
-        fontWeight: 'bold'
-      },
+      }, 
   });
   

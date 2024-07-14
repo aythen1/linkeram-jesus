@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View,ImageBackground, TextInput , TouchableOpacity, Image, Dimensions,CheckBox,ScrollView,FlatList  } from 'react-native'
+import { Text, StyleSheet, View,ImageBackground, TextInput , TouchableOpacity, Image, Dimensions,ScrollView,FlatList  } from 'react-native'
 import React, { Component ,useState} from 'react'
 
 
@@ -289,15 +289,7 @@ const styles = StyleSheet.create({
     tituloartbold:{
         marginLeft: '3vw',
         fontWeight: 'bold',
-    },
-    tituloh1:{
-        color: "#622FAE", 
-        fontWeight: 'bold',
-        fontSize: 36,
-        paddingLeft: 50,
-        textAlign: 'left',
-       
-      },
+    },    
       padre:{
         flex: 1,
         justifyContent: 'center',
@@ -308,50 +300,13 @@ const styles = StyleSheet.create({
         width: '70%',
         paddingBottom: 100,
       },
-      alturaheight:{
-        marginTop: '-5vw',
-        height: '35vw',
-      },
       titulouso:{
         color: "#1F184B", 
         fontWeight: 'bold',
         fontSize: 26,
         paddingLeft: 50,
         textAlign: 'left', 
-      },
-      titulousomor:{
-        color: "#622FAE", 
-        fontWeight: 'bold',
-        fontSize: 26,
-        paddingLeft: 50,
-        textAlign: 'left', 
-      },
-      parrafo:{
-        color: "#6D6D6D",
-        textAlign: 'center',
-        paddingLeft: 50,
-        fontSize: 'medium',
-        textAlign: 'left',
-        paddingBottom: 20,
-      },
-      parrafobold:{
-        color: "#6D6D6D",
-        fontWeight: 'bold',
-        textAlign: 'center',
-        paddingLeft: 50,
-        fontSize: 'medium',
-        textAlign: 'left',
-        paddingBottom: 20,
-      },
-      parrafoboldn:{
-        color: "#000000",
-        fontWeight: 'bold',
-        textAlign: 'center',
-        paddingLeft: 50,
-        fontSize: 'large',
-        textAlign: 'left',
-        paddingBottom: 20,
-      },
+      }, 
     txtinput:{
       height: '20%',
       width: '80%',
@@ -453,12 +408,7 @@ const styles = StyleSheet.create({
     txtbtn2:{
         color: "#FFFFFF",
         fontWeight: "bold",
-    }, 
-    txtbtn3:{
-        color: "#FFFFFF",
-        fontWeight: "bold",
-        textAlign: 'center',
-    },        
+    },    
     righside: {
         display: 'flex',
         position: 'fixed',
@@ -508,10 +458,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginLeft: '15vw',
         marginTop: '0vw',               
-      },      
-      txtnormalbold:{
-        color: "#1F184B", 
-        fontWeight: 'bold'
-      },
+      },  
   });
   
