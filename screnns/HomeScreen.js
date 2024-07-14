@@ -1,5 +1,25 @@
 import { Text, StyleSheet, View,ImageBackground, TextInput , TouchableOpacity, Image, Dimensions,CheckBox,ScrollView } from 'react-native'
 import React, { Component ,useState} from 'react'
+import logo from '../assets/logo.png'
+import link from '../assets/link.png'
+import presentacion from '../assets/presentacion.png'
+import googleico from '../assets/goolgeico.png'
+import linea1 from '../assets/Line1.png'
+import linea2 from '../assets/Line2.png'
+import eye from '../assets/eye.png'
+import social1 from '../assets/social1.png'
+import social2 from '../assets/social2.png'
+import social3 from '../assets/social3.png'
+import social4 from '../assets/social4.png'
+import social5 from '../assets/social5.png'
+import social6 from '../assets/social6.png'
+import social7 from '../assets/social7.png'
+import candado from '../assets/candado.png'
+import grafico from '../assets/chart.png'
+import check from '../assets/check.png'
+import checkwhite from '../assets/checkwhite.png'
+
+
 
 const { width } = Dimensions.get('window');
 
@@ -28,7 +48,7 @@ const HomeScreen = () => {
       <View style={styles.contenedor}  >
         <View style={[styles.header, width < 750 ? styles.smallScreenContainer : null]}>
         <View style={styles.logo}>
-        <ImageBackground source={{ uri: './assets/logo.png' }} resizeMode="cover" style={{ width: '100%', height: '100%' }}>
+        <ImageBackground source={logo} resizeMode="cover" style={{ width: '100%', height: '100%' }}>
             <View></View>
         </ImageBackground>        
         </View>
@@ -47,7 +67,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <Image
          resizeMode="cover"
-        source={{ uri: './assets/link.png' }}
+        source={link}
         style={styles.imgsize}
       />
         <TouchableOpacity style={styles.btnsesion2}>
@@ -60,7 +80,7 @@ const HomeScreen = () => {
             <View style={styles.imgseccion1}  >
               <Image
           resizeMode="cover"
-          source={{ uri: './assets/presentacion.png' }}
+          source={presentacion}
           style={styles.imgsize2}
         />
 
@@ -75,19 +95,19 @@ const HomeScreen = () => {
              <Text style={styles.txtgoogle}>
              <Image
          resizeMode="cover"
-        source={{ uri: './assets/goolgeico.png' }}
+        source={googleico}
         style={styles.imgsize3}
       /> Ingresar con Google
              </Text>
             <Text style={styles.text}>
             <Image
          resizeMode="cover"
-        source={{ uri: './assets/Line1.png' }}
+        source={linea1}
         style={styles.imgline}
       />  o ingresa con tus datos  
         <Image
          resizeMode="cover"
-        source={{ uri: './assets/Line2.png' }}
+        source={linea2}
         style={styles.imgline}
       /> </Text>
      <TextInput
@@ -106,7 +126,7 @@ const HomeScreen = () => {
       />
       <TouchableOpacity onPress={toggleShowPassword}>
       <Image
-        source={{ uri: './assets/eye.png' }}
+        source={eye}
         style={styles.imgeye}
       />
       </TouchableOpacity>
@@ -169,31 +189,31 @@ const HomeScreen = () => {
                       
             <View style={styles.contenedorsocial}>
             <Image
-                source={{ uri: './assets/social1.png' }}
+                source={social1}
                 style={styles.imgsocial}
             />
             <Image
-                source={{ uri: './assets/social2.png' }}
+                source={social2}
                 style={styles.imgsocial}
             />
             <Image
-                source={{ uri: './assets/social3.png' }}
+                source={social3}
                 style={styles.imgsocial}
             />
             <Image
-                source={{ uri: './assets/social4.png' }}
+                source={social4}
                 style={styles.imgsocial}
             />
             <Image
-                source={{ uri: './assets/social5.png' }}
+                source={social5}
                 style={styles.imgsocial}
             />
             <Image
-                source={{ uri: './assets/social6.png' }}
+                source={social6}
                 style={styles.imgsocial}
             />
             <Image
-                source={{ uri: './assets/social7.png' }}
+                source={social7}
                 style={styles.imgsocial}
             />
             </View>
@@ -212,7 +232,7 @@ const HomeScreen = () => {
                 </Text>
                 </View>  
                 <Image
-                source={{ uri: './assets/candado.png' }}
+                source={candado}
                 style={styles.imgsocialcand}
             />  
                 <View style={styles.contenedortxt2}  >
@@ -234,7 +254,7 @@ const HomeScreen = () => {
 
                 <View style={styles.contenedortxt2}  >
                 <Image
-                source={{ uri: './assets/chart.png' }}
+                source={grafico}
                 style={styles.imgsocialcand2}
             />      
                 <View  style={styles.contencoluna}><Text style={styles.txtfont}>W</Text><Text style={styles.txtfont}>T</Text  ><Text style={styles.txtfont}>W</Text><Text style={styles.txtfont}>T</Text><Text style={styles.txtfont}>F</Text><Text style={styles.txtfont}>S</Text></View>
@@ -274,48 +294,48 @@ Haz un seguimiento del engagement a lo largo del tiempo, monitorea tus ingresos 
             <Text style={styles.subtitle}>Plan Freemium</Text>
             <Text style={styles.txtbold}>$0/mes</Text>
             <Text style={styles.txtnormalazul}><Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Hasta 50 campos personalizados</Text>   
              <Text style={styles.txtnormalazul}><Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Botones de contacto</Text>   
              <Text style={styles.txtnormalazul}><Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Personalización del perfil</Text> 
             <Text style={styles.txtnormalazul}><Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Embed Fields (próximamente).</Text> 
              <Text style={styles.txtnormalazul}> <Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Enlace único de Linkeram
              </Text>  
 
              <Text style={styles.txtnormalazul}> <Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Monetización básica
             </Text>
             
             <Text style={styles.txtnormalazul}> <Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Tarjeta de visita digital
             </Text>
               
             <Text style={styles.txtnormalazul}> <Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Analíticas básicas (1 mes)
@@ -334,34 +354,34 @@ Haz un seguimiento del engagement a lo largo del tiempo, monitorea tus ingresos 
 
 
             <Text style={styles.txtnormalwhite}><Image
-                source={{ uri: './assets/checkwhite.png' }}
+                source={checkwhite}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Hasta 100 campos personalizados</Text>   
              <Text style={styles.txtnormalwhite}><Image
-                source={{ uri: './assets/checkwhite.png' }}
+                source={checkwhite}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Cifrado de campos</Text>   
              <Text style={styles.txtnormalwhite}><Image
-                source={{ uri: './assets/checkwhite.png' }}
+                source={checkwhite}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Campos programados (próximamente).</Text> 
             <Text style={styles.txtnormalwhite}><Image
-                source={{ uri: './assets/checkwhite.png' }}
+                source={checkwhite}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Envío de correos a suscriptores del boletín.</Text> 
              <Text style={styles.txtnormalwhite}> <Image
-                source={{ uri: './assets/checkwhite.png' }}
+                source={checkwhite}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Integraciones CSV
              </Text>  
 
              <Text style={styles.txtnormalwhite}> <Image
-                source={{ uri: './assets/checkwhite.png' }}
+                source={checkwhite}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Analíticas básicas (6 mes)
@@ -379,48 +399,48 @@ Haz un seguimiento del engagement a lo largo del tiempo, monitorea tus ingresos 
            
             
             <Text style={styles.txtnormalazul} ><Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Soporte prioritario</Text>   
              <Text style={styles.txtnormalazul}><Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             /> Promoción, promocionarse dentro de la plataforma</Text>   
              <Text style={styles.txtnormalazul}><Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Campañas de marketing (próximamente).</Text> 
             <Text style={styles.txtnormalazul}><Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Motor de búsqueda de elementos en el perfil (próximamente</Text> 
              <Text style={styles.txtnormalazul}> <Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Añade metadatos para mejorar el SEO (próximamente).
              </Text>  
 
              <Text style={styles.txtnormalazul}> <Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Integración de Meta Pixel Tracking para análisis avanzado (próximamente).
             </Text>
             
             <Text style={styles.txtnormalazul}> <Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Tarjeta de visita sin marca de agua
             </Text>
               
             <Text style={styles.txtnormalazul}> <Image
-                source={{ uri: './assets/check.png' }}
+                source={check}
                 style={styles.imgsocialcand3}
                  resizeMode="cover"
             />  Analíticas avanzadas
@@ -437,9 +457,6 @@ Haz un seguimiento del engagement a lo largo del tiempo, monitorea tus ingresos 
         </View>    
         
         
-        
-
-
       </View>
       </ScrollView>
     )
@@ -453,8 +470,7 @@ const styles = StyleSheet.create({
     header: {
       display: 'flex',
       backgroundColor: '#fff', 
-      width: '100%',
-      
+      width: '100%',      
       justifyContent: 'space-between',      
       flexDirection: 'row',
 
@@ -490,8 +506,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         paddingLeft: 10,
         paddingRight: 10,
-        paddingTop: 5,
-        
+        paddingTop: 5,        
     },
     btnsesion2: {
         backgroundColor: "#8828FF",

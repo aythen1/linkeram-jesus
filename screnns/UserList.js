@@ -1,5 +1,8 @@
 import { Text, StyleSheet, View,ImageBackground, TextInput , TouchableOpacity, Image, Dimensions,ScrollView,FlatList  } from 'react-native'
 import React, { Component ,useState} from 'react'
+import logo from '../assets/logo.png'
+import link from '../assets/link.png'
+import lupa from '../assets/search.png'
 
 
 
@@ -69,7 +72,7 @@ const UserList = () => {
       <View style={styles.contenedor}  >
         <View style={[styles.header, width < 750 ? styles.smallScreenContainer : null]}>
         <View style={styles.logo}>
-        <ImageBackground source={{ uri: './assets/logo.png' }} resizeMode="cover" style={{ width: '100%', height: '100%' }}>
+        <ImageBackground source={logo} resizeMode="cover" style={{ width: '100%', height: '100%' }}>
             <View></View>
         </ImageBackground>        
         </View>
@@ -89,7 +92,7 @@ const UserList = () => {
         </TouchableOpacity>
         <Image
          resizeMode="cover"
-        source={{ uri: './assets/link.png' }}
+        source={link}
         style={styles.imgsize}
       />
         <TouchableOpacity style={styles.btnsesion2}>
@@ -118,7 +121,7 @@ const UserList = () => {
       />
       <TouchableOpacity >
       <Image
-        source={{ uri: './assets/search.png' }}
+        source={lupa}
         style={styles.imglupa}
       />
       </TouchableOpacity>
@@ -213,7 +216,7 @@ const UserList = () => {
 
         
         <View style={styles.logof}>
-        <ImageBackground source={{ uri: './assets/logo.png' }} resizeMode="cover" style={{ width: '100%', height: '100%', marginLeft: '-40vw', marginTop: '5vw' }}>
+        <ImageBackground source={logo} resizeMode="cover" style={{ width: '100%', height: '100%', marginLeft: '-40vw', marginTop: '5vw' }}>
             <View></View>
         </ImageBackground>        
         </View>

@@ -1,13 +1,12 @@
 import { Text, StyleSheet, View,ImageBackground, TextInput , TouchableOpacity, Image, Dimensions,ScrollView,FlatList  } from 'react-native'
 import React, { Component ,useState} from 'react'
+import logo from '../assets/logo.png'
+import link from '../assets/link.png'
 
 const { width } = Dimensions.get('window');
 
 const TermsandPrivacy = () => {
-
-    
-               
-
+            
 
         const data = [
             { id: 1, title: 'Registrarse' },
@@ -27,7 +26,7 @@ const TermsandPrivacy = () => {
       <View style={styles.contenedor}  >
         <View style={[styles.header, width < 750 ? styles.smallScreenContainer : null]}>
         <View style={styles.logo}>
-        <ImageBackground source={{ uri: './assets/logo.png' }} resizeMode="cover" style={{ width: '100%', height: '100%' }}>
+        <ImageBackground source={logo} resizeMode="cover" style={{ width: '100%', height: '100%' }}>
             <View></View>
         </ImageBackground>        
         </View>
@@ -46,7 +45,7 @@ const TermsandPrivacy = () => {
         </TouchableOpacity>
         <Image
          resizeMode="cover"
-        source={{ uri: './assets/link.png' }}
+        source={link}
         style={styles.imgsize}
       />
         <TouchableOpacity style={styles.btnsesion2}>
@@ -88,7 +87,7 @@ const TermsandPrivacy = () => {
     </View>
 
     <View style={styles.logo}>
-        <ImageBackground source={{ uri: './assets/logo.png' }} resizeMode="cover" style={{ width: '100%', height: '100%' }}>
+        <ImageBackground source={logo} resizeMode="cover" style={{ width: '100%', height: '100%' }}>
             <View></View>
         </ImageBackground>        
         </View>

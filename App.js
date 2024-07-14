@@ -8,7 +8,7 @@ import UserList from './screnns/UserList';
 export default function App() {
   return (
     <View style={styles.container}>
-      <HomeScreen/>
+      <UserList/>
       <StatusBar style="auto" />
     </View>
   );
