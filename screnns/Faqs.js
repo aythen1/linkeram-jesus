@@ -8,10 +8,14 @@ const { width } = Dimensions.get('window');
 const Faqs = () => {
 
 
-  
+  window.onload = function() {
     confirm('We use third-party cookies in order to personalise your experience.\nRead our cookie policy');
+   };
 
+    
   
+    
+
         const data = [
             { id: 1, title: 'Registrarse' },
             { id: 2, title: 'Iniciar Sesión' },

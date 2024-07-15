@@ -112,7 +112,7 @@ const HomeScreen = () => {
       /> </Text>
      <TextInput
         style={styles.btnsesion3}
-        placeholder="usuario o email"
+        placeholder="Usuario o email"
         
       />
 
