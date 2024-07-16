@@ -1,7 +1,6 @@
-import { Text, StyleSheet, View,TextInput , Picker , TouchableOpacity, Image, Dimensions,ScrollView,FlatList,CheckBox  } from 'react-native'
-import React, { Component ,useState} from 'react'
+import { Text, StyleSheet, View,TextInput , Picker , TouchableOpacity, Image, Dimensions,ScrollView,FlatList  } from 'react-native'
+import React, { useState} from 'react'
 import logoimg from '../assets/logo.png'
-import link from '../assets/link.png'
 import presentacion from '../assets/presentacion.png'
 import googleico from '../assets/goolgeico.png'
 import linea1 from '../assets/Line1.png'
@@ -187,11 +186,9 @@ const SingUppersonal = () => {
         
         <View style={{height:15}}>
             
-            {item.id == '7' ? (
-            <Text style={styles.tituloartbold}>{item.title}</Text>
-            ) : (
+            
             <Text style={styles.tituloart}>{item.title}</Text>
-            )}
+          
                     
         </View>
       )}
@@ -223,10 +220,7 @@ const styles = StyleSheet.create({
       marginLeft: '3.5vw',
       borderColor: "#cccccc",
       color: "#1F1819",
-    },
-    selectopc:{
-      padding: 25,
-    },
+    },    
     logo: {
         height: 36,
         width: 180,
@@ -247,17 +241,6 @@ const styles = StyleSheet.create({
         marginLeft: '3vw',
        
     }, 
-    estiloselect:{
-      padding: '3vw',
-      height: '5vw',
-    },
-    contenopc:{
-        display: 'flex',
-        justifyContent: 'space-around',
-        flexDirection: 'row',
-        width: '60%'
-        
-      },
       contenopc2:{
         display: 'flex',
         justifyContent: 'space-evenly',
@@ -347,26 +330,11 @@ const styles = StyleSheet.create({
     singupseccion1:{
         width: '60vw',
         height: '30vw',
-
         flex: 1,        
         alignItems: 'left',
         paddingLeft: '5vw',
-        paddingTop: '5vw',
-        
-        
-    },  
-    tituloartbold:{
-        marginLeft: '3vw',
-        fontWeight: 'bold',
-    },
-    tituloh1:{
-        color: "#622FAE", 
-        fontWeight: 'bold',
-        fontSize: 36,
-        paddingLeft: 50,
-        textAlign: 'left',
-       
-      },
+        paddingTop: '5vw',                
+    },          
       txtgoogle:{
         fontSize: 16,
       

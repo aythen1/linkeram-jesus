@@ -1,17 +1,17 @@
-import { Text, StyleSheet, View,TextInput , Picker , TouchableOpacity, Image, Dimensions,ScrollView,FlatList  } from 'react-native'
+import { Text, StyleSheet, View,TextInput, TouchableOpacity, Image, Dimensions,ScrollView,FlatList,CheckBox  } from 'react-native'
 import React, { useState} from 'react'
 import logoimg from '../assets/logo.png'
 import presentacion from '../assets/presentacion.png'
-import googleico from '../assets/goolgeico.png'
-import linea1 from '../assets/Line1.png'
-import linea2 from '../assets/Line2.png'
+import icollave from '../assets/llave.png'
 import eye from '../assets/eye.png'
+import capchadivimg from '../assets/capcha.png'
+import imgvolver from '../assets/arrow-left.png'
 
 
 
 const { width } = Dimensions.get('window');
 
-const SingUpempresa = () => {
+const RecoveryPass = () => {
             
   const [selectedValue, setSelectedValue] = useState('');
 
@@ -61,7 +61,16 @@ const SingUpempresa = () => {
         </View>
          
   <View style={styles.singupseccion1} >
+    <View style={styles.volverdiv}>
+  <Text style={styles.txtvolver}>
+  <Image
+         resizeMode="cover"
+        source={imgvolver}  
+        style={styles.volverimg}      
+      />
 
+     Volver</Text>
+     </View>
   <Image
          resizeMode="cover"
         source={logoimg}
@@ -69,80 +78,61 @@ const SingUpempresa = () => {
       />
 
 
-             <Text style={styles.txtgoogle}>
+             <Text style={styles.txtgooglellave}>
              <Image
          resizeMode="cover"
-        source={googleico}
-        style={styles.imgsize3}
-      /> Registrarse con Google
-             </Text>
+        source={icollave}
+        style={styles.imgsize3lla}
+      /> </Text>
 
             
 
             <Text style={styles.text}>
-            <Image
-         resizeMode="cover"
-        source={linea1}
-        style={styles.imgline}
-      />  o registrate con tus datos    
-        <Image
-         resizeMode="cover"
-        source={linea2}
-        style={styles.imgline}
-      /> </Text>
-
-<Picker
-        selectedValue={selectedValue}
-        onValueChange={(itemValue) => setSelectedValue(itemValue)}
-        style={styles.estilopicker}
-      >
-        <Picker.Item label="Empresa" value = "0" />
-        <Picker.Item label="Personal" value = "1" />
-        <Picker.Item label="General" value = "2" />
-      </Picker>
- 
-<TextInput
-        style={styles.btnsesion3}
-        placeholder="Nombre de empresa"
-        
-      />
+           ¿Olvidaste tú contraseña?   
+        </Text>
+        <Text style={styles.txtnormalcent}> Ingresa tu email registrado a tu cuenta de Linkeram para resetear tu contraseña </Text>
 
 
      <TextInput
         style={styles.btnsesion3}
-        placeholder="Usuario o email"
+        placeholder="email"
         
       />
 
       
 
-<TextInput        
-        secureTextEntry={!showPassword}
-        style={styles.btnsesion3}
-        value={password}
-        onChangeText={setPassword}
-        placeholder="Contraseña"
-      />
-      <TouchableOpacity onPress={toggleShowPassword}>
-      <Image
-        source={eye}
-        style={styles.imgeye}
-      />
-      </TouchableOpacity>
-
-      
            
 <View>
 
+     <View style={styles.capchadiv}>
+     <View style={styles.capchadivcontent}>
+     <Image
+         resizeMode="cover"
+        source={capchadivimg}
+        style={styles.imgsize3}
+      />
 
+<Text style={styles.txtnormalck}><CheckBox
+        value={isChecked}
+        onValueChange={handleCheck}
+      />  I'm not a robot</Text>
+
+
+<Text style={styles.txtnormalr}>reCAPTCHA</Text>
+<Text style={styles.txtnormalr}>Privacy - Terms</Text>
+
+      
+      
+       
+     </View>
+     </View>
 
        <TouchableOpacity style={styles.btnsesion4}>
-            <Text style={styles.txtbtn3}>Registrarse</Text>
+            <Text style={styles.txtbtn3}>Enviar link</Text>
         </TouchableOpacity>
         <View style={styles.contenopc2}>
-       <Text style={styles.txtnormal}> Creando una cuenta afirmas estar de acuerdo con nuestros <Text  style={styles.txtnormalbold}>Términos y Políticas de Privacidad</Text></Text>
        
-       <Text style={styles.txtnormal}> ¿Ya tienes cuenta? <Text  style={styles.txtnormalbold}>Inicia Sesión</Text></Text>
+       <Text style={styles.txtnormal}> ¿Recordaste tu contraseña? <Text  style={styles.txtnormalbold}>Iniciar Sesión</Text></Text>
     </View>   
 
 
@@ -179,7 +169,7 @@ const SingUpempresa = () => {
         
         <View style={{height:15}}>
             
-           
+            
             <Text style={styles.tituloart}>{item.title}</Text>
            
                     
@@ -196,7 +186,7 @@ const SingUpempresa = () => {
   
 }
 
-export default SingUpempresa
+export default RecoveryPass
 
 
 
@@ -206,7 +196,23 @@ const styles = StyleSheet.create({
         color: "#FFFFFF",
         fontWeight: "bold",
         textAlign: 'center',
-    },    
+    },
+    volverdiv:{
+      width: '25vw',
+      marginLeft: '3.5vw',
+      marginTop: '0vw',
+      position: 'relative',
+      top: 10,
+    },
+    txtvolver:{
+      color: "#1F1819",
+      fontSize: 20,
+      paddingBottom: 30,
+    },
+    volverimg:{
+      position: 'relative',
+      top: 10,
+    },
     estilopicker:{
       padding: 10,
       width: '25vw',
@@ -217,12 +223,40 @@ const styles = StyleSheet.create({
     selectopc:{
       padding: 25,
     },
+    capchadiv:{
+      borderWidth: 1,
+      borderColor:"#CCCCCC",
+      height: 50,
+      width: '25vw',
+      paddingStart: 30,
+      justifyContent: 'center',
+      borderStyle: 'dashed',
+      borderRadius: 5,
+      padding: 20,
+      paddingLeft: 10,
+      paddingRight: 10,
+      marginRight: 50,
+      marginLeft: 50,
+      marginTop: 10,
+      paddingTop: 5,
+      placeholderTextColor:"#C3C3C3",  
+    },
+    capchadivcontent:{
+        width: 220,
+        height: 50,
+        borderWidth: 1,
+        borderColor:"#CCCCCC",
+        marginTop: 12,
+        marginLeft: 50,
+    },
     logo: {
         height: 36,
         width: 180,
         justifyContent: 'center',
         textAlign: 'center',
-        marginLeft: '8vw',
+        marginLeft: '25vw',
+        position: 'relative',
+        top: '-3vw',
        
     }, 
     imgsize2:{
@@ -236,11 +270,7 @@ const styles = StyleSheet.create({
     tituloart:{
         marginLeft: '3vw',
        
-    }, 
-    estiloselect:{
-      padding: '3vw',
-      height: '5vw',
-    },
+    },     
     contenopc:{
         display: 'flex',
         justifyContent: 'space-around',
@@ -278,26 +308,37 @@ const styles = StyleSheet.create({
         color: "#1F184B", 
         textAlign: 'center',
       },
-      txtnormal2:{
-        color: "#1F184B",         
-        paddingStart: 30,
-        fontSize: 16, 
+      txtnormalr:{
+        color: "#1F184B", 
+        textAlign: 'center',
+        fontSize: 9,
+        marginLeft: 130,
+        marginTop: -26,
+        lineHeight: 35,
       },
+      txtnormalck:{
+        color: "#1F184B", 
+        textAlign: 'left',
+        paddingLeft: 5,
+        justifyContent: 'center',        
+      },
+      txtnormalcent:{
+        color: "#1F184B", 
+        textAlign: 'center',
+        width: '28vw',
+        marginLeft: 30,
+      },     
       txtnormalbold:{
         color: "#1F184B", 
         fontWeight: 'bold'
       },
-    imgeye:{
-        width: 20,
-        height: 20, 
-        position: 'relative',
-        left: '26vw',
-        top: -30,
-     },
+    
     text: {
         fontSize: 20,
-        color: "#8828FF",
-         marginLeft: 50,
+        color: "#1F184B",
+         textAlign: 'center',
+         width: '30vw',
+         fontWeight: 'bold',
       },
       btnsesion3: {
         borderWidth: 1,
@@ -316,18 +357,22 @@ const styles = StyleSheet.create({
         paddingTop: 5,
         placeholderTextColor:"#C3C3C3",        
     },
-      imgline:{
-        width: '3vw',
-        height: 2,
-        marginBottom: 4,
-        alignItems: 'center',
-        
-      },
+      
+      imgsize3lla:{
+        position: 'relative',
+        top: 6,
+        width: 50,
+        textAlign: 'center',
+        height: 50,   
+        marginLeft: 30,
+    },
     imgsize3:{
         position: 'relative',
         top: 6,
-        width: 30,
-        height: 30,       
+        width: 25,
+        textAlign: 'center',
+        height: 25,   
+        marginLeft: '75%',
     },
     vistapresentacion:{
         width: '60vw',
@@ -361,6 +406,11 @@ const styles = StyleSheet.create({
         fontSize: 16,
       
         marginLeft: 100,
+        marginBottom: 4,
+      },txtgooglellave:{
+        fontSize: 16,
+      
+        marginLeft: 160,
         marginBottom: 4,
       },
       

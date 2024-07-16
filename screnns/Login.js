@@ -1,7 +1,5 @@
 import { Text, StyleSheet, View,TextInput , TouchableOpacity, Image, Dimensions,ScrollView,FlatList,CheckBox  } from 'react-native'
-import React, { Component ,useState} from 'react'
-import logo from '../assets/logo.png'
-import link from '../assets/link.png'
+import React, { useState} from 'react'
 import presentacion from '../assets/presentacion.png'
 import googleico from '../assets/goolgeico.png'
 import linea1 from '../assets/Line1.png'
@@ -157,12 +155,9 @@ const Login = () => {
         
         <View style={{height:15}}>
             
-            {item.id == '7' ? (
-            <Text style={styles.tituloartbold}>{item.title}</Text>
-            ) : (
+            
             <Text style={styles.tituloart}>{item.title}</Text>
-            )}
-                    
+            
         </View>
       )}
       keyExtractor={(item) => item.id.toString()}
@@ -233,12 +228,7 @@ const styles = StyleSheet.create({
     },
       txtnormal:{
         color: "#1F184B", 
-      },
-      txtnormal2:{
-        color: "#1F184B",         
-        paddingStart: 30,
-        fontSize: 16, 
-      },
+      },      
       txtnormalbold:{
         color: "#1F184B", 
         fontWeight: 'bold'
@@ -300,19 +290,7 @@ const styles = StyleSheet.create({
         paddingTop: '5vw',
         
         
-    },  
-    tituloartbold:{
-        marginLeft: '3vw',
-        fontWeight: 'bold',
     },
-    tituloh1:{
-        color: "#622FAE", 
-        fontWeight: 'bold',
-        fontSize: 36,
-        paddingLeft: 50,
-        textAlign: 'left',
-       
-      },
       txtgoogle:{
         fontSize: 16,
       

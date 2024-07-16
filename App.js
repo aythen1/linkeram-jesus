@@ -7,11 +7,18 @@ import UserList from './screnns/UserList';
 import Login from './screnns/Login';
 import SingUppersonal from './screnns/SingUppersonal';
 import SingUpempresa from './screnns/SingUpempresa';
+import RecoveryPass from './screnns/RecoveryPass';
+import NewPass from './screnns/NewPass';
+import EmailVerify from './screnns/EmailVerify';
+import LinkExpired from './screnns/LinkExpired';
+import Activated from './screnns/Activated';
+import ChangePass from './screnns/ChangePass';
+import EmailReady from './screnns/EmailReady';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <SingUpempresa/>
+      <EmailReady/>
       <StatusBar style="auto" />
     </View>
   );
