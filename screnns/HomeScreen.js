@@ -10,7 +10,7 @@ import {
   CheckBox,
   ScrollView,
 } from "react-native";
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import link from "../assets/link.png";
 import presentacion from "../assets/presentacion.png";

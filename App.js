@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet,  View } from "react-native";
 import HomeScreen from "./screnns/HomeScreen";
 import TermsandPrivacy from "./screnns/TermsandPrivacy";
 import Faqs from "./screnns/Faqs";
@@ -14,11 +14,13 @@ import LinkExpired from "./screnns/LinkExpired";
 import Activated from "./screnns/Activated";
 import ChangePass from "./screnns/ChangePass";
 import EmailReady from "./screnns/EmailReady";
+import Cuentas from "./screnns/Cuentas";
+import AjustesPrivacidad from "./screnns/AjustesPrivacidad";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <UserList />
+      <AjustesPrivacidad />
       <StatusBar style="auto" />
     </View>
   );
