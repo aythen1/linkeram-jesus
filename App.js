@@ -16,11 +16,12 @@ import ChangePass from "./screnns/ChangePass";
 import EmailReady from "./screnns/EmailReady";
 import Cuentas from "./screnns/Cuentas";
 import AjustesPrivacidad from "./screnns/AjustesPrivacidad";
+import AjustesNoticaciones from "./screnns/AjustesNotificaciones";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <AjustesPrivacidad />
+      <AjustesNoticaciones />
       <StatusBar style="auto" />
     </View>
   );

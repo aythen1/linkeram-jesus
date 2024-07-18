@@ -16,6 +16,7 @@ import link from "../assets/link.png";
 import { ayudas } from "../constants/ayuda";
 import { datamenu } from "../constants/datamenu";
 import { data } from "../constants/barmenu";
+import { data2 } from "../constants/barmenu2";
 import { datanotif } from "../constants/datanotif";
 import  link1  from  "../assets/bell.png";
 import  link2  from  "../assets/Ellipse.png";
@@ -34,6 +35,10 @@ import vatar from "../assets/vatar.png";
 import switchd from "../assets/ajustes.png";
 import cand from "../assets/settings.png";
 import cand2 from "../assets/power.png";
+import tglee from "../assets/ggle.png";
+import tglee2 from "../assets/ggle2.png";
+import Toogle from "../components/Toggle";
+import Toogleon from "../components/Toggleon";
 import dos from "../assets/dos.png";
 
 const { width } = Dimensions.get("window");
@@ -74,7 +79,7 @@ const AjustesPrivacidad = () => {
 
   const renderItem = ({ item }) => {
     return (
-        <View>
+      <View>
       <Text style={styles.nombre}>{item.name}</Text>        
       <ImageBackground
         source={item.image}
@@ -165,7 +170,7 @@ const AjustesPrivacidad = () => {
             
             
               <FlatList
-                data={data}
+                data={data2}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id.toString()}
               />
@@ -227,261 +232,74 @@ style={styles.bell9}
 
             </View>
             <View style={styles.seccion3}>
-              <Text style={styles.labeltxt}>Administrar Cuenta</Text>
-              <ImageBackground
-
-              source={bgimg}
-              resizeMode="cover"
-              style={styles.bell3}
-              >
-                  <Textos txt="AB" style={styles.labeltxt3}/>
-              <View></View>
-              </ImageBackground>
-              <View style={styles.estiloscont}>
-                          
-              <Textos txt="Nombre" style={styles.labeltxtmin}/>
-              <Textos txt="Apellido" style={styles.labeltxtmin}/>
+              <Text style={styles.labeltxt}>Notificaciones de cuenta</Text>
              
-              </View>
-              <View style={styles.estiloscont}>
-                          
-                       <Entradatxt pholder="Andrew" style={styles.entrada}/>
-                       <Entradatxt pholder="Boston" style={styles.entrada}/>
-              </View>
-              <View style={styles.estiloscont}>
-                          
-              <Textos txt="Nombre Empresa" style={styles.labeltxtmin}/>
+
+              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando los usuarios que sigues publiquen contenido.</Text>
+              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text> 
+              
+              <Toogle/>     
+              
+              <Text style={styles.labeltxtc}>Notifiación push</Text>
              
-             
-              </View>
-              <View style={styles.estiloscont}>
-              <Entradatxt pholder="Linkeram S.L." style={styles.entradalg}/>
-              </View>  
-              <View style={styles.estiloscont}>
-                          
-              <Textos txt="Nombre de usuario" style={styles.labeltxtmin}/>
-            
-             
-              </View>
-              <View style={styles.estiloscont}>
-                          
-                       <Entradatxt pholder="@andrewboston" style={styles.entrada}/>
+              <Toogleon/>
 
-                       <ImageBackground
+              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando hagas una compra en la plataforma.</Text>
+              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text>  
+              <Toogle/>               
+              <Text style={styles.labeltxtc}>Notifiación push</Text>
+              <Toogleon/> 
 
-                      source={verf}
-                      resizeMode="cover"
-                      style={styles.bell5}
-                      >
-                      <View></View>
-                      </ImageBackground>
 
-                       <ImageBackground
-
-                      source={bgimginsta}
-                      resizeMode="cover"
-                      style={styles.bell4}
-                      >
-                      <View></View>
-                      </ImageBackground>
-                       <Textos txt="Importar de Instagram" style={styles.labeltxt}/>
-
-                       
-              </View>
-
-              <View style={styles.estiloscont}>
-                          
-                     
-                     <ImageBackground
-
-                    source={bginfo}
-                    resizeMode="cover"
-                    style={styles.bell4}
-                    >
-                    <View></View>
-                    </ImageBackground>
-                       <Textos txt="Entre 8 y 22 caracteres" style={styles.labeltxt2}/>
-
-                       <ImageBackground
-
-                      source={bgimginsta}
-                      resizeMode="cover"
-                      style={styles.bell4}
-                      >
-                      <View></View>
-                      </ImageBackground>
-                      <Textos txt="Instagram" style={styles.labeltxt}/>
-                      
-
-                      
-                       
-              </View>
-              <View style={styles.estiloscont}>
-                          
-                     
-                          <ImageBackground
-     
-                         source={bginfo}
-                         resizeMode="cover"
-                         style={styles.bell4}
-                         >
-                         <View></View>
-                         </ImageBackground>
-                            <Textos txt="Este usuario ya existe." style={styles.labeltxt2}/>
-                            <Textos txt="@AlexHamilton" style={styles.labeltxtc}/>
-                   </View>
-
-                   
-                   <View style={styles.estiloscont}>
-                            <Textos txt="Tipo de Cuenta" style={styles.labeltxt}/>
-                           
-                   </View>
-                   <View style={styles.estiloscont}>
-                           
-                            <Textos txt="Administra qué contenido mostraras en tu perfil." style={styles.labeltxtc}/>
-                   </View>
-                   <View style={styles.estiloscont}>
-                            <Textos txt="¿Tu cuenta es personal o de empresa?" style={styles.labeltxtmin}/>
-                            <Entradatxt pholder="personal" style={styles.entrada}/>
-                   </View>
-                   <View style={styles.estiloscont}>
-                            <Textos txt="Audiencia" style={styles.labeltxt}/>
-                                                                                                            
-                            
-                   </View>
-                   <View style={styles.estiloscont}>
-                            
-                            <Textos txt="Administra qué información permites que vean otras personas." style={styles.labeltxtc}/>
-                            
-                   </View>
-                                      
-                   <View style={styles.estiloscont}>
-                            <Textos txt="Cuenta privada" style={styles.labeltxtmin}/>
-                           
-                   </View>
-                   <View style={styles.estiloscont}>
-                   <Textos txt="Cuando se selecciona esta opción tu información de tu cuenta solo es visibles para las personas que te siguen." style={styles.labeltxtc}/>
-                           
-                          <ImageBackground
-     
-     source={toggle}
-     resizeMode="cover"
-     style={styles.bell6}
-     >
-     <View></View>
-     </ImageBackground>
-                   </View>
-                   <View style={styles.estiloscont}>
-                            <Textos txt="Cambiar contraseña" style={styles.labeltxt}/>
-                                                                                                            
-                            
-                   </View>
-                   <View style={styles.estiloscont}>
-                            <Textos txt="Contraseña actual" style={styles.labeltxtmin}/>
-                           
-                   </View>
-                   <View style={styles.estiloscont}>
-                          
+              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando tengas un nuevo seguidor o solicitud de seguimiento.</Text>
+              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text> 
+              <Toogle/>   
                   
-            
-              <TextInput
-                secureTextEntry={!showPassword}
-                style={styles.entrada}
-                value={password}
-                onChangeText={setPassword}
-                placeholder="***********"
-              />
-              <TouchableOpacity onPress={toggleShowPassword}>
-                <Image source={eye} style={styles.imgeye} />
-              </TouchableOpacity>
-            
-              </View>
-              <View style={styles.estiloscont}>
-                            <Textos txt="¿Olvidaste tu contraseña?" style={styles.labeltxtmin}/>
-                           
-                   </View>
+              <Text style={styles.labeltxtc}>Notifiación push</Text>
+              <Toogleon/>
+              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando hagas una compra en la plataforma.</Text>
+              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text>  
+              <Toogle/>  
+                
 
-                   <View style={styles.estiloscont}>
-                            <Textos txt="Nueva contraseña" style={styles.labeltxtmin}/>
-                            <Textos txt="Confirmar Contraseña" style={styles.labeltxtmin}/>
-                   </View>
-                   <View style={styles.estiloscont}>
-                          
-                  
-            
-              <TextInput
-                secureTextEntry={!showPassword2}
-                style={styles.entrada}
-                value={password2}
-                onChangeText={setPassword2}
-                placeholder="***********"
-              />
-              <TouchableOpacity onPress={toggleShowPassword2}>
-                <Image source={eye} style={styles.imgeye} />
-              </TouchableOpacity>
-
+              <Text style={styles.labeltxtc}>Notifiación push</Text>
+              <Toogleon/>
 
               
-              <TextInput
-                secureTextEntry={!showPassword3}
-                style={styles.entrada}
-                value={password3}
-                onChangeText={setPassword3}
-                placeholder="***********"
-              />
-              <TouchableOpacity onPress={toggleShowPassword3}>
-                <Image source={eye} style={styles.imgeye} />
-              </TouchableOpacity>
+
+
+              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando un campo haya alcanzado el límite de acceso, de compra o de descarga.</Text>
+              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text>  
+
+              <Toogle/>
+              <Text style={styles.labeltxtc}>Notifiación push</Text>
+              <Toogleon/>
+
+              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando tengas un nuevo seguidor o solicitud de seguimiento.</Text>
+              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text>              
+              <Toogle/>  
+             
+
+              <Text style={styles.labeltxtc}>Notifiación push</Text>
+              <Toogleon/>
 
               
-            
-              </View>
 
-              <Textos txt="Si cambias tu contraseña, se cerrarán todas tus sesiones activas de Linkeram, excepto la que estás usando en este momento. Las aplicaciones que tienen acceso a tu cuenta no se verán afectadas." style={styles.labeltxtc}/>
+              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando tus amigos de Instagram creen una cuenta en Linkeram.</Text>
+              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text>              
+              <Toogle/>
+              <Text style={styles.labeltxtc}>Notifiación push</Text>
+              <Toogleon/>
+              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando alguien se suscriba a tu NewsLetter.</Text>
+              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text>              
+              <Toogle/>
+              <Text style={styles.labeltxtc}>Notifiación push</Text>
+              <Toogleon/>
 
-              <View style={styles.estiloscont}>
-                            <Textos txt="Actualizar correo electrónico" style={styles.labeltxt}/>
-                                                                                                            
-                            
-                   </View>
-
-                   <View style={styles.estiloscont}>
-                            <Textos txt="Email actual" style={styles.labeltxtmin}/>                            
-                   </View>
-                   <View style={styles.estiloscont}>
-                           
-                            <Entradatxt pholder="johndoe@gmail.com" style={styles.entrada}/>                           
-                   </View>
-                   <View style={styles.estiloscont}>
-                            <Textos txt="¿Olvidaste tu email?" style={styles.labeltxtmin}/>                            
-                   </View>
-                   <View style={styles.estiloscont}>
-                            <Textos txt="Nuevo email" style={styles.labeltxtmin}/> 
-                          
-                   </View>
-                   <View style={styles.estiloscont}>
-                          
-                            <Entradatxt pholder="usuario o email" style={styles.entrada}/>                             
-                   </View>
-
-                   <Textos txt="Si cambias tu email, se cerrarán todas tus sesiones activas de Linkeram, excepto la que estás usando en este momento. Las aplicaciones que tienen acceso a tu cuenta no se verán afectadas. Se envíará un correo electrónico de confirmación para verificar el cambio de dirección de correo." style={styles.labeltxtc}/>
-                   <View style={styles.estiloscont}>
-                            <Textos txt="Eliminar cuenta Linkeram" style={styles.labeltxt}/>
-                                                                                                            
-                            
-                   </View>
                    <View style={styles.estiloscont}>
 
-                                    <ImageBackground
-                      
-                      source={vatar}
-                      resizeMode="cover"
-                      style={styles.bell7}
-                      >
-                      <View></View>
-                      </ImageBackground>
-                            <Textos txt="Borrar cuenta Linkeram" style={styles.labeltxt}/>
-                                                                                                            
+                                  
+                                                                                                          
                           
             <View style={styles.containers}>
             <TouchableOpacity style={styles.btnCancel} >
@@ -525,7 +343,7 @@ const styles = StyleSheet.create({
     color: "#1F184B",
     fontSize: 18,
     textAlign: 'left',
-    width: '25vw',
+    width: '35vw',
     fontWeight: 'bold',
     marginTop: 10,
     
@@ -554,7 +372,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     position: 'relative',
     top: '5vw',
-    left: '-24vw',
+    left: '5vw',
   },
   containers:{
     display: 'flex',
@@ -571,7 +389,7 @@ const styles = StyleSheet.create({
     textAlign: 'center', 
     position: 'relative',
     top: '5vw',
-    left: '-20vw',
+    left: '8vw',
   },
   labeltxtmin:{
     color: "#1F184B",
@@ -590,7 +408,7 @@ const styles = StyleSheet.create({
     top: 15,
   },
   labeltxtc:{
-    color: "#777777",
+    color: "#1F184B",
     fontSize: 18,
     textAlign: 'left',
     width: '40vw',   
@@ -598,10 +416,11 @@ const styles = StyleSheet.create({
     
   }, 
   labeltxt2:{
-    color: "#DC3545",
-    fontSize: 16,
+    color: "#1F184B",
+    fontSize: 18,
     textAlign: 'left',
-    width: '25vw',    
+    width: '50vw',
+    fontWeight: 'bold',
     marginTop: 10,
   },
   labeltxt3:{
@@ -753,9 +572,81 @@ bell9:{
   top: 20,
   left: -30,
 },
+bell10:{
+  width: 44,
+  height: 24, 
+  position: 'absolute',
+  paddingLeft: 30,
+  paddingRight: 0,  
+  top: 100,
+  left: '40vw',
+},
+bell11:{
+  width: 44,
+  height: 24, 
+  position: 'absolute',
+  paddingLeft: 30,
+  paddingRight: 0,
+  top: 70,
+  left: '40vw',
+},
+bell12:{
+  width: 44,
+  height: 24, 
+  position: 'absolute',
+  paddingLeft: 30,
+  paddingRight: 0,
+  top: 100,
+  left: '40vw',
+},
+bell13:{
+  width: 44,
+  height: 24, 
+  position: 'absolute',
+  paddingLeft: 30,
+  paddingRight: 0,
+  top: 190,
+  left: '40vw',
+},
+bell14:{
+  width: 44,
+  height: 24, 
+  position: 'absolute',
+  paddingLeft: 30,
+  paddingRight: 0,
+  top: 160,
+  left: '40vw',
+},
+bell15:{
+  width: 44,
+  height: 24, 
+  position: 'absolute',
+  paddingLeft: 30,
+  paddingRight: 0,
+  top: 250,
+  left: '40vw',
+},
+bell16:{
+  width: 44,
+  height: 24, 
+  position: 'absolute',
+  paddingLeft: 30,
+  paddingRight: 0,
+  top: 285,
+  left: '40vw',
+},
+bell17:{
+  width: 44,
+  height: 24, 
+  position: 'absolute',
+  paddingLeft: 30,
+  paddingRight: 0,
+  top: 250,
+  left: '40vw',
+},
 vistacont:{
 position: 'relative',
-top: width < 750 ? '2vw' : '70vw',
+top: width < 750 ? '2vw' : '20vw',
 left: 40,
 },
   contenedor: {
