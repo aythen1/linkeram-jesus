@@ -84,7 +84,7 @@ const Listados = () => {
 
   const renderItem = ({item}) => {
     const backgroundColor = item.id === selectedId ? '#FAFAFA' : '#FAFAFA';
-    const color = item.id === selectedId ? 'black' : 'black';
+    const color = item.id === selectedId ? '#1F184B' : '#1F184B';
 
     return (
       <Item
@@ -92,9 +92,13 @@ const Listados = () => {
         onPress={() => setSelectedId(item.id)}
         backgroundColor={backgroundColor}
         textColor={color}
+        
       />
     );
   };
+
+
+  
 
   return (
     <SafeAreaView style={styles.container}>

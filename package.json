@@ -17,8 +17,10 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.3",
+    "react-native-carousel-image-slider": "^1.0.1",
     "react-native-modal": "^13.0.1",
     "react-native-picker-select": "^9.1.3",
+    "react-native-snap-carousel": "^3.9.1",
     "react-native-tab-view": "^3.5.2",
     "react-native-table-component": "^1.2.2",
     "react-native-web": "~0.19.10"

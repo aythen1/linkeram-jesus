@@ -9,6 +9,8 @@ import {
   Dimensions,
   ScrollView,
   FlatList,
+  Row,
+  Table,
 } from "react-native";
 import React, {  useState } from "react";
 import logo from "../assets/logo.png";
@@ -40,6 +42,7 @@ import tglee2 from "../assets/ggle2.png";
 import Toogle from "../components/Toggle";
 import Toogleon from "../components/Toggleon";
 import dos from "../assets/dos.png";
+import Listados from "../components/Listados";
 import homelog from "../assets/homelog.png";
 
 
@@ -73,6 +76,12 @@ const AjustesPrivacidad = () => {
 
 
   
+  
+ 
+  
+ 
+
+
 
   const renderItem = ({ item }) => {
     return (
@@ -165,13 +174,13 @@ const AjustesPrivacidad = () => {
           <View  style={styles.alturaheight}>
             <View style={[styles.seccion1, width < 750 ? null : null]}>            
             
-            
+
             <ImageBackground
               source={homelog}
               resizeMode="cover"
               style={{ width: 44, height: 44, position: 'relative', top: '3vw', left: '15vw' }}
             />
-
+            
               <FlatList
                 data={data2}
                 renderItem={renderItem}
@@ -235,69 +244,20 @@ style={styles.bell9}
 
             </View>
             <View style={styles.seccion3}>
-              <Text style={styles.labeltxt}>Notificaciones de cuenta</Text>
+              <Text style={styles.labeltxt}>Añade tus Cuentas</Text>
+              <Text style={styles.labeltxtp}>Integra Linkeram con otras plataformas para potenciar la productividad!</Text>
+              <View style={styles.seccionconten}>
+              
+              <Text style={styles.labeltxtp22}>Todo</Text>
+              <Text style={styles.labeltxtp2}>Google</Text>
+              <Text style={styles.labeltxtp2}>Mensajeria</Text>
+              <Text style={styles.labeltxtp2}>Redes Sociales</Text>
+              <Text style={styles.labeltxtp2}>E commerce</Text>
+              </View>
              
+            <Listados />
+            
 
-              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando los usuarios que sigues publiquen contenido.</Text>
-              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text> 
-              
-              <Toogle/>     
-              
-              <Text style={styles.labeltxtc}>Notifiación push</Text>
-             
-              <Toogleon/>
-
-              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando hagas una compra en la plataforma.</Text>
-              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text>  
-              <Toogle/>               
-              <Text style={styles.labeltxtc}>Notifiación push</Text>
-              <Toogleon/> 
-
-
-              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando tengas un nuevo seguidor o solicitud de seguimiento.</Text>
-              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text> 
-              <Toogle/>   
-                  
-              <Text style={styles.labeltxtc}>Notifiación push</Text>
-              <Toogleon/>
-              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando hagas una compra en la plataforma.</Text>
-              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text>  
-              <Toogle/>  
-                
-
-              <Text style={styles.labeltxtc}>Notifiación push</Text>
-              <Toogleon/>
-
-              
-
-
-              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando un campo haya alcanzado el límite de acceso, de compra o de descarga.</Text>
-              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text>  
-
-              <Toogle/>
-              <Text style={styles.labeltxtc}>Notifiación push</Text>
-              <Toogleon/>
-
-              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando tengas un nuevo seguidor o solicitud de seguimiento.</Text>
-              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text>              
-              <Toogle/>  
-             
-
-              <Text style={styles.labeltxtc}>Notifiación push</Text>
-              <Toogleon/>
-
-              
-
-              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando tus amigos de Instagram creen una cuenta en Linkeram.</Text>
-              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text>              
-              <Toogle/>
-              <Text style={styles.labeltxtc}>Notifiación push</Text>
-              <Toogleon/>
-              <Text style={styles.labeltxt2}>Recibirás notificaciones cuando alguien se suscriba a tu NewsLetter.</Text>
-              <Text style={styles.labeltxtc}>Notificaciones vía mail</Text>              
-              <Toogle/>
-              <Text style={styles.labeltxtc}>Notifiación push</Text>
-              <Toogleon/>
 
                    <View style={styles.estiloscont}>
 
@@ -350,6 +310,25 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 10,
     
+  },   
+   labeltxtp2:{
+    color: "#1F184B",
+    fontSize: 16,
+    textAlign: 'left',
+    width: '35vw',
+    fontWeight: 'bold',
+    marginTop: 10,
+    
+  }, 
+  labeltxtp22:{
+    color: "#1F184B",
+    fontSize: 16,
+    textAlign: 'left',
+    width: '35vw',
+    fontWeight: 'bold',
+    borderBottomWidth: 1,
+    borderBottomColor: "#1F184B",
+    marginTop: 10,    
   }, 
   text1: { 
     margin: 6 ,
@@ -380,7 +359,8 @@ const styles = StyleSheet.create({
   containers:{
     display: 'flex',
     justifyContent: 'space-between',
-    flexDirection: 'row',
+    flexDirection: 'row',    
+    height: '3vw',
   },
   btnSave: {
     backgroundColor: '#1F184B',
@@ -393,50 +373,7 @@ const styles = StyleSheet.create({
     position: 'relative',
     top: '5vw',
     left: '8vw',
-  },
-  labeltxtmin:{
-    color: "#1F184B",
-    fontSize: 15,
-    textAlign: 'left',
-    width: '25vw',
-    fontWeight: 'bold',
-    marginTop: 10,
-    
-  }, 
-  imgeye: {
-    width: 20,
-    height: 20,
-    position: "relative",
-    left: "-6vw",
-    top: 15,
-  },
-  labeltxtc:{
-    color: "#1F184B",
-    fontSize: 18,
-    textAlign: 'left',
-    width: '40vw',   
-    marginTop: 3,
-    
-  }, 
-  labeltxt2:{
-    color: "#1F184B",
-    fontSize: 18,
-    textAlign: 'left',
-    width: '50vw',
-    fontWeight: 'bold',
-    marginTop: 10,
-  },
-  labeltxt3:{
-    color: "#ffffff",
-    fontSize: 30,
-    textAlign: 'left',
-    width: '25vw',
-    fontWeight: 'bold',    
-    marginTop: 10,
-    position: 'relative',
-    top: 5,
-    left: -10,
-  },
+  },        
   entrada:{
     color: "#1F184B",
     padding: '1.8vw',
@@ -445,16 +382,7 @@ const styles = StyleSheet.create({
     height: 25,
     borderColor: "#cccccc",
     borderWidth: 1,
-  },
-  entradalg:{
-    color: "#1F184B",
-    padding: '1.8vw',
-    width: '44vw',
-    marginLeft: '0vw',
-    height: 25,
-    borderColor: "#cccccc",
-    borderWidth: 1,
-  },
+  },  
   bg:{
     backgroundColor: "#cccccc",
     width: '5vw',
@@ -511,52 +439,7 @@ const styles = StyleSheet.create({
     paddingRight: 30,
     top: 10,
     left: 8,
- }, 
-  bell3:{
-  width: 80,
-  height: 80, 
-  position: 'relative',
-  paddingLeft: 30,
-  paddingRight: 30,
-  top: 10,
-  left: 250,
-},
-bell4:{
-  width: 24,
-  height: 24, 
-  position: 'relative',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 3,
-  left: 0,
-},
-bell5:{
-  width: 16,
-  height: 15, 
-  position: 'relative',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 15,
-  left: -85,
-},
-bell6:{
-  width: 44,
-  height: 24, 
-  position: 'relative',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 15,
-  left: 10,
-},
-bell7:{
-  width: 52,
-  height: 52, 
-  position: 'relative',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 5,
-  left: -10,
-},
+ },
 bell8:{
   width: 192,
   height: 31, 
@@ -574,78 +457,6 @@ bell9:{
   paddingRight: 0,
   top: 20,
   left: -30,
-},
-bell10:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,  
-  top: 100,
-  left: '40vw',
-},
-bell11:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 70,
-  left: '40vw',
-},
-bell12:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 100,
-  left: '40vw',
-},
-bell13:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 190,
-  left: '40vw',
-},
-bell14:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 160,
-  left: '40vw',
-},
-bell15:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 250,
-  left: '40vw',
-},
-bell16:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 285,
-  left: '40vw',
-},
-bell17:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 250,
-  left: '40vw',
 },
 vistacont:{
 position: 'relative',
@@ -669,8 +480,16 @@ left: 40,
     width: width < 750 ? "100%" : "20%",    
     marginLeft:  width < 750 ? '14vw' : '3vw',
   },
+  seccionconten:{
+    display: 'flex',
+    justifyContent: 'left',
+    flexDirection: 'row',
+    width: "50vw",    
+    
+   
+  },
   seccion3:{
-     
+    height: '70vw',  
     width: width < 750 ? "100%" : "65%",
     marginLeft:  width < 750 ? '14vw' : '3vw',
   },

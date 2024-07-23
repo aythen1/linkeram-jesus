@@ -273,7 +273,7 @@ const HomeScreen = () => {
 
           <View style={styles.contflexcard}>
             <View style={styles.flexcard}>
-              <Text style={styles.subtitle}>Plan Freemium</Text>
+            <Text style={styles.subtitle}>Plan Freemium</Text>
               <Text style={styles.txtbold}>$0/mes</Text>
               <Text style={styles.txtnormalazul}>
                 <Image

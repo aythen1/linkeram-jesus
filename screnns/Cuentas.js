@@ -12,6 +12,7 @@ import React  from "react";
 import logo from "../assets/logo.png";
 import { TabView, SceneMap } from 'react-native-tab-view';
 import { Table, Row, Rows } from 'react-native-table-component';
+import tableHead from "../constants/datanotif"
 import Listados from "../components/Listados";
 
 const { width } = Dimensions.get("window");
@@ -20,8 +21,16 @@ const { width } = Dimensions.get("window");
 
 const Cuentas = () => {
 
-  const tableHead = ['Todo', 'Google', 'Mensajeria', 'Redes Sociales', 'E-commerce'];
- 
+  const datamenu = [
+    { id: 1, title: "Registrarse" },
+    { id: 2, title: "Iniciar Sesión" },
+    { id: 3, title: "Buscador" },
+    { id: 4, title: "Sobre Nosotros" },
+    { id: 5, title: "Planes" },
+    { id: 6, title: "Centro de Ayuda" },
+    { id: 7, title: "Términos y Políticas" },
+  ];
+  
 
   return (
     <ScrollView>
@@ -55,6 +64,15 @@ const Cuentas = () => {
            <Text style={styles.tituloh1}>Añade tus Cuentas</Text>
            <Text style={styles.parrafo}>Integra Linkeram con otras plataformas para potenciar la productividad!</Text>
            <Table style={styles.tablast} >
+           <View style={styles.seccionconten}>
+              
+              <Text style={styles.labeltxtp22}>Todo</Text>
+              <Text style={styles.labeltxtp2}>Google</Text>
+              <Text style={styles.labeltxtp2}>Mensajeria</Text>
+              <Text style={styles.labeltxtp2}>Redes Sociales</Text>
+              <Text style={styles.labeltxtp2}>E commerce</Text>
+              </View>
+
             <Row  data={tableHead} style={styles.head} textStyle={styles.text}/>            
             <Listados />
             <View style={styles.containers}>
@@ -86,6 +104,33 @@ const styles = StyleSheet.create({
 
     justifyContent: "space-between",
     flexDirection: "row",
+  },
+  labeltxtp2:{
+    color: "#1F184B",
+    fontSize: 16,
+    textAlign: 'left',
+    width: '35vw',
+    fontWeight: 'bold',
+    marginTop: 10,
+    
+  },   
+  seccionconten:{
+    display: 'flex',
+    justifyContent: 'left',
+    flexDirection: 'row',
+    width: "50vw",    
+    
+   
+  },
+  labeltxtp22:{
+    color: "#1F184B",
+    fontSize: 16,
+    textAlign: 'left',
+    width: '35vw',
+    fontWeight: 'bold',
+    borderBottomWidth: 1,
+    borderBottomColor: "#1F184B",
+    marginTop: 10,    
   }, 
   containers: {
    

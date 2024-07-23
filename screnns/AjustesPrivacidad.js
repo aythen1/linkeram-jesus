@@ -35,6 +35,8 @@ import switchd from "../assets/ajustes.png";
 import cand from "../assets/settings.png";
 import cand2 from "../assets/power.png";
 import dos from "../assets/dos.png";
+import homelog from "../assets/homelog.png";
+
 
 const { width } = Dimensions.get("window");
 
@@ -163,7 +165,13 @@ const AjustesPrivacidad = () => {
           <View  style={styles.alturaheight}>
             <View style={[styles.seccion1, width < 750 ? null : null]}>            
             
-            
+            <ImageBackground
+              source={homelog}
+              resizeMode="cover"
+              style={{ width: 44, height: 44, position: 'relative', top: '3vw', left: '15vw' }}
+            />
+
+
               <FlatList
                 data={data}
                 renderItem={renderItem}
@@ -227,7 +235,7 @@ style={styles.bell9}
 
             </View>
             <View style={styles.seccion3}>
-              <Text style={styles.labeltxt}>Administrar Cuenta</Text>
+            <Text style={styles.labeltxt}>Administrar Cuenta</Text>
               <ImageBackground
 
               source={bgimg}

@@ -17,11 +17,17 @@ import EmailReady from "./screnns/EmailReady";
 import Cuentas from "./screnns/Cuentas";
 import AjustesPrivacidad from "./screnns/AjustesPrivacidad";
 import AjustesNoticaciones from "./screnns/AjustesNotificaciones";
+import AjustesIntegraciones from "./screnns/AjustesIntegraciones";
+import AjustesCobros from "./screnns/AjustesCobros";
+import AjustesPrecios from "./screnns/AjustesPrecios";
+import AjustesNotificacionesTodo from "./screnns/AjustesNotificacionesTodo";
+import AjustesCobrar from "./screnns/AjustesCobrar";
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <AjustesNoticaciones />
+      <AjustesCobrar />
       <StatusBar style="auto" />
     </View>
   );
