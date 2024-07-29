@@ -19,27 +19,7 @@ import { datamenu } from "../constants/datamenu";
 const { width } = Dimensions.get("window");
 
 const EmailReady = () => {
-  const [selectedValue, setSelectedValue] = useState("");
-
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-
-  const toggleShowPassword = () => {
-    setShowPassword(!showPassword);
-  };
-
-  const [password2, setPassword2] = useState("");
-  const [showPassword2, setShowPassword2] = useState(false);
-
-  const toggleShowPassword2 = () => {
-    setShowPassword2(!showPassword2);
-  };
-
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheck = () => {
-    setIsChecked(!isChecked);
-  };
+  
 
   return (
     <ScrollView>
@@ -192,29 +172,7 @@ const styles = StyleSheet.create({
     width: "25vw",
     marginLeft: 50,
     fontWeight: "bold",
-  },
-  btnsesion3: {
-    borderWidth: 1,
-    borderColor: "#5F54A4",
-    color: "#5F54A4",
-    height: 50,
-    width: "25vw",
-    paddingStart: 30,
-    justifyContent: "center",
-    textAlign: "center",
-    borderRadius: 5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginRight: 50,
-    marginLeft: 50,
-    marginTop: 10,
-  },
-  imgline: {
-    width: "3vw",
-    height: 2,
-    marginBottom: 4,
-    alignItems: "center",
-  },
+  },    
   imgsize3lla: {
     position: "relative",
     top: 6,

@@ -12,31 +12,15 @@ import {
 } from "react-native";
 import React, {  useState } from "react";
 import logo from "../assets/logo.png";
-import link from "../assets/link.png";
-import { ayudas } from "../constants/ayuda";
-import { datamenu } from "../constants/datamenu";
-import { data } from "../constants/barmenu";
 import { data2 } from "../constants/barmenu2";
 import { datanotif } from "../constants/datanotif";
 import  link1  from  "../assets/bell.png";
 import  link2  from  "../assets/Ellipse.png";
 import  link3  from  "../assets/menu.png";
-import  link4  from  "../assets/menu.png";
 import  crearbtn  from  "../assets/crearbtn.png";
-import bgimg from "../assets/Ellipsef.png";
-import Textos from "../components/Textos";
-import Entradatxt from "../components/Entradatxt";
-import bgimginsta from '../assets/instagram.png';
-import bginfo from '../assets/info.png';
-import verf from '../assets/iconverde.png';
-import toggle from '../assets/ggle.png';
-import eye from "../assets/eye.png";
-import vatar from "../assets/vatar.png"; 
 import switchd from "../assets/ajustes.png";
 import cand from "../assets/settings.png";
 import cand2 from "../assets/power.png";
-import tglee from "../assets/ggle.png";
-import tglee2 from "../assets/ggle2.png";
 import Toogle from "../components/Toggle";
 import Toogleon from "../components/Toggleon";
 import dos from "../assets/dos.png";
@@ -45,33 +29,9 @@ import homelog from "../assets/homelog.png";
 
 const { width } = Dimensions.get("window");
 
-const AjustesPrivacidad = () => {
+const AjustesNotificaciones = () => {
 
-  const [selectedValue, setSelectedValue] = useState("");
-
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-
-  const toggleShowPassword = () => {
-    setShowPassword(!showPassword);
-  };
-
-  const [password2, setPassword2] = useState("");
-  const [showPassword2, setShowPassword2] = useState(false);
-
-  const toggleShowPassword2 = () => {
-    setShowPassword2(!showPassword2);
-  };
-
-
-  const [password3, setPassword3] = useState("");
-  const [showPassword3, setShowPassword3] = useState(false);
-
-  const toggleShowPassword3= () => {
-    setShowPassword3(!showPassword3);
-  };
-
-
+  
   
 
   const renderItem = ({ item }) => {
@@ -331,7 +291,7 @@ style={styles.bell9}
   );
 };
 
-export default AjustesPrivacidad;
+export default AjustesNotificaciones;
 
 const styles = StyleSheet.create({
   header: {
@@ -393,24 +353,8 @@ const styles = StyleSheet.create({
     position: 'relative',
     top: '5vw',
     left: '8vw',
-  },
-  labeltxtmin:{
-    color: "#1F184B",
-    fontSize: 15,
-    textAlign: 'left',
-    width: '25vw',
-    fontWeight: 'bold',
-    marginTop: 10,
-    
-  }, 
-  imgeye: {
-    width: 20,
-    height: 20,
-    position: "relative",
-    left: "-6vw",
-    top: 15,
-  },
-  labeltxtc:{
+  },   
+   labeltxtc:{
     color: "#1F184B",
     fontSize: 18,
     textAlign: 'left',
@@ -425,40 +369,7 @@ const styles = StyleSheet.create({
     width: '50vw',
     fontWeight: 'bold',
     marginTop: 10,
-  },
-  labeltxt3:{
-    color: "#ffffff",
-    fontSize: 30,
-    textAlign: 'left',
-    width: '25vw',
-    fontWeight: 'bold',    
-    marginTop: 10,
-    position: 'relative',
-    top: 5,
-    left: -10,
-  },
-  entrada:{
-    color: "#1F184B",
-    padding: '1.8vw',
-    width: '20vw',
-    marginRight: '4vw',
-    height: 25,
-    borderColor: "#cccccc",
-    borderWidth: 1,
-  },
-  entradalg:{
-    color: "#1F184B",
-    padding: '1.8vw',
-    width: '44vw',
-    marginLeft: '0vw',
-    height: 25,
-    borderColor: "#cccccc",
-    borderWidth: 1,
-  },
-  bg:{
-    backgroundColor: "#cccccc",
-    width: '5vw',
-  },
+  }, 
   estiloscont:{
    display: 'flex',   
    justifyContent: 'left',
@@ -512,51 +423,7 @@ const styles = StyleSheet.create({
     top: 10,
     left: 8,
  }, 
-  bell3:{
-  width: 80,
-  height: 80, 
-  position: 'relative',
-  paddingLeft: 30,
-  paddingRight: 30,
-  top: 10,
-  left: 250,
-},
-bell4:{
-  width: 24,
-  height: 24, 
-  position: 'relative',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 3,
-  left: 0,
-},
-bell5:{
-  width: 16,
-  height: 15, 
-  position: 'relative',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 15,
-  left: -85,
-},
-bell6:{
-  width: 44,
-  height: 24, 
-  position: 'relative',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 15,
-  left: 10,
-},
-bell7:{
-  width: 52,
-  height: 52, 
-  position: 'relative',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 5,
-  left: -10,
-},
+
 bell8:{
   width: 192,
   height: 31, 
@@ -574,78 +441,6 @@ bell9:{
   paddingRight: 0,
   top: 20,
   left: -30,
-},
-bell10:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,  
-  top: 100,
-  left: '40vw',
-},
-bell11:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 70,
-  left: '40vw',
-},
-bell12:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 100,
-  left: '40vw',
-},
-bell13:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 190,
-  left: '40vw',
-},
-bell14:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 160,
-  left: '40vw',
-},
-bell15:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 250,
-  left: '40vw',
-},
-bell16:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 285,
-  left: '40vw',
-},
-bell17:{
-  width: 44,
-  height: 24, 
-  position: 'absolute',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 250,
-  left: '40vw',
 },
 vistacont:{
 position: 'relative',
@@ -680,14 +475,7 @@ left: 40,
   tituloartbold: {
     marginLeft: "3vw",
     fontWeight: "bold",
-  },
-  tituloh1: {
-    color: "#622FAE",
-    fontWeight: "bold",
-    fontSize: 36,
-    paddingLeft: 50,
-    textAlign: "left",
-  },
+  },  
   padre: {
     flex: 1,
     justifyContent: "center",
@@ -705,58 +493,8 @@ left: 40,
     justifyContent: 'left',
     height: '50vw',
     width: '100%',
-  },
-  titulouso: {
-    color: "#1F184B",
-    fontWeight: "bold",
-    fontSize: 26,
-    paddingLeft: 50,
-    textAlign: "left",
-  },
-  titulousomor: {
-    color: "#622FAE",
-    fontWeight: "bold",
-    fontSize: 26,
-    paddingLeft: 50,
-    textAlign: "left",
-  },
-  parrafo: {
-    color: "#6D6D6D",
-    textAlign: "center",
-    paddingLeft: 50,
-    fontSize: "medium",
-    textAlign: "left",
-    paddingBottom: 20,
-  },
-  parrafobold: {
-    color: "#6D6D6D",
-    fontWeight: "bold",
-    textAlign: "center",
-    paddingLeft: 50,
-    fontSize: "medium",
-    textAlign: "left",
-    paddingBottom: 20,
-  },
-  parrafoboldn: {
-    color: "#000000",
-    fontWeight: "bold",
-    textAlign: "center",
-    paddingLeft: 50,
-    fontSize: "1.5vw",
-    textAlign: "left",
-    paddingBottom: 10,
-    paddingTop: 20,
-  },
-  txtinput: {
-    height: "20%",
-    width: "80%",
-    alignItems: "flex-start",
-    padding: 10,
-    marginTop: 0,
-    borderBottomWidth: 1,
-    borderBottomColor: "#C3C3C3",
-  },
-  logo: {
+  },    
+    logo: {
     height: "4vw",
     width: "18vw",
     paddingLeft: 20,
@@ -772,52 +510,7 @@ left: 40,
     marginRight: 50,
     marginTop: 10,
   },
-  btnsesion1: {
-    marginRight: 50,
-    marginTop: 10,
-    textShadowColor: "#8828FF",
-    borderWidth: 1,
-    borderColor: "#8828FF",
-    height: 35,
-    borderRadius: 5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingTop: 5,
-  },
-  btnsesion2: {
-    backgroundColor: "#8828FF",
-    height: 35,
-    borderRadius: 5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginRight: 50,
-    marginTop: 10,
-    paddingTop: 5,
-  },
-  correobold: {
-    color: "#1F184B",
-    fontWeight: "bold",
-    fontSize: 18,
-  },
-  correo: {
-    position: "relative",
-    top: "-49%",
-    left: "80%",
-  },
-  correof: {
-    position: "relative",
-    top: "5%",
-    left: "40%",
-  },
-  txtbtn1: {
-    color: "#8828FF",
-    fontWeight: "bold",
-  },
-  txtbtn2: {
-    color: "#FFFFFF",
-    fontWeight: "bold",
-  },
-  righside: {
+    righside: {
     display: "flex",
       
     justifyContent: "flex-end",
@@ -825,42 +518,8 @@ left: 40,
     marginTop: 10,
     height: 80,
   },
-  imgsize: {
-    width: 25,
-    height: 20,
-    marginTop: 8,
-    position: "relative",
-    top: 10,
-    left: -20,
-  },
-  imgsize3: {
-    width: 10,
-    height: 10,
-    marginTop: 8,
-    position: "relative",
-    top: 10,
-    left: -40,
-  },
-  smallScreenContainer: {   
+   smallScreenContainer: {   
     flexDirection: "column",
   },
-  contenedorseccion1: {
-    height: "10%",
-    width: "100%",
-    display: "flex",
-    justifyContent: "center",
-    marginTop: "-6vw",
-    flexDirection: "row",
-    paddingTop: 0,
-  },
-  contenedorseccion2: {
-    height: "5%",
-    width: "80vw",
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-    textAlign: "center",
-    paddingLeft: "10vw",
-    marginTop: "0vw",
-  },
+   
 });

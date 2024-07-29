@@ -2,8 +2,7 @@ import {
   Text,
   StyleSheet,
   View,
-  TextInput,
-  Picker,
+  TextInput,  
   TouchableOpacity,
   Image,
   Dimensions,
@@ -21,27 +20,7 @@ import { datamenu } from "../constants/datamenu";
 const { width } = Dimensions.get("window");
 
 const EmailVerify = () => {
-  const [selectedValue, setSelectedValue] = useState("");
-
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-
-  const toggleShowPassword = () => {
-    setShowPassword(!showPassword);
-  };
-
-  const [password2, setPassword2] = useState("");
-  const [showPassword2, setShowPassword2] = useState(false);
-
-  const toggleShowPassword2 = () => {
-    setShowPassword2(!showPassword2);
-  };
-
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheck = () => {
-    setIsChecked(!isChecked);
-  };
+  
 
   return (
     <ScrollView>
@@ -235,13 +214,7 @@ const styles = StyleSheet.create({
     marginRight: 50,
     marginLeft: 50,
     marginTop: 10,
-  },
-  imgline: {
-    width: "3vw",
-    height: 2,
-    marginBottom: 4,
-    alignItems: "center",
-  },
+  },  
   imgsize3lla: {
     position: "relative",
     top: 6,
@@ -270,18 +243,7 @@ const styles = StyleSheet.create({
     alignItems: "left",
     paddingLeft: "5vw",
     paddingTop: "5vw",
-  },
-  tituloartbold: {
-    marginLeft: "3vw",
-    fontWeight: "bold",
-  },
-  tituloh1: {
-    color: "#622FAE",
-    fontWeight: "bold",
-    fontSize: 36,
-    paddingLeft: 50,
-    textAlign: "left",
-  },
+  },    
   txtgoogle: {
     fontSize: 16,
 

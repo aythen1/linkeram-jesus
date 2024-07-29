@@ -14,7 +14,6 @@ import React, { useState } from "react";
 import logoimg from "../assets/logo.png";
 import presentacion from "../assets/presentacion.png";
 import icollave from "../assets/llave.png";
-import eye from "../assets/eye.png";
 import capchadivimg from "../assets/capcha.png";
 import imgvolver from "../assets/arrow-left.png";
 import { datamenu } from "../constants/datamenu";
@@ -153,17 +152,7 @@ const styles = StyleSheet.create({
   volverimg: {
     position: "relative",
     top: 10,
-  },
-  estilopicker: {
-    padding: 10,
-    width: "25vw",
-    marginLeft: "3.5vw",
-    borderColor: "#cccccc",
-    color: "#1F1819",
-  },
-  selectopc: {
-    padding: 25,
-  },
+  },   
   capchadiv: {
     borderWidth: 1,
     borderColor: "#CCCCCC",

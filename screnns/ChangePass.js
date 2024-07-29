@@ -2,8 +2,7 @@ import {
   Text,
   StyleSheet,
   View,
-  TextInput,
-  Picker,
+  TextInput,  
   TouchableOpacity,
   Image,
   Dimensions,
@@ -21,27 +20,7 @@ import { datamenu } from "../constants/datamenu";
 const { width } = Dimensions.get("window");
 
 const ChangePass = () => {
-  const [selectedValue, setSelectedValue] = useState("");
-
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-
-  const toggleShowPassword = () => {
-    setShowPassword(!showPassword);
-  };
-
-  const [password2, setPassword2] = useState("");
-  const [showPassword2, setShowPassword2] = useState(false);
-
-  const toggleShowPassword2 = () => {
-    setShowPassword2(!showPassword2);
-  };
-
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheck = () => {
-    setIsChecked(!isChecked);
-  };
+  
 
   return (
     <ScrollView>
@@ -158,13 +137,7 @@ const styles = StyleSheet.create({
   },
   tituloart: {
     marginLeft: "3vw",
-  },
-  contenopc: {
-    display: "flex",
-    justifyContent: "space-around",
-    flexDirection: "row",
-    width: "60%",
-  },
+  },  
   contenopc2: {
     display: "flex",
     justifyContent: "space-evenly",

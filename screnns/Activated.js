@@ -19,20 +19,8 @@ import { datamenu } from "../constants/datamenu";
 const { width } = Dimensions.get("window");
 
 const Activated = () => {
-  const [selectedValue, setSelectedValue] = useState("");
+  
 
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-
-  const toggleShowPassword = () => {
-    setShowPassword(!showPassword);
-  };
-
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheck = () => {
-    setIsChecked(!isChecked);
-  };
 
   return (
     <ScrollView>
@@ -166,11 +154,7 @@ const styles = StyleSheet.create({
   },
   tituloart: {
     marginLeft: "3vw",
-  },
-  estiloselect: {
-    padding: "3vw",
-    height: "5vw",
-  },
+  },  
   contenopc: {
     display: "flex",
     justifyContent: "space-around",
@@ -266,13 +250,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     paddingTop: 10,
     placeholderTextColor: "#C3C3C3",
-  },
-  imgline: {
-    width: "3vw",
-    height: 2,
-    marginBottom: 4,
-    alignItems: "center",
-  },
+  },  
   imgsize3lla: {
     position: "relative",
     top: 6,

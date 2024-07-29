@@ -154,10 +154,7 @@ const styles = StyleSheet.create({
     marginLeft: "3.5vw",
     borderColor: "#cccccc",
     color: "#1F1819",
-  },
-  selectopc: {
-    padding: 25,
-  },
+  },  
   logo: {
     height: 36,
     width: 180,
@@ -174,11 +171,7 @@ const styles = StyleSheet.create({
   },
   tituloart: {
     marginLeft: "3vw",
-  },
-  estiloselect: {
-    padding: "3vw",
-    height: "5vw",
-  },
+  },  
   contenopc: {
     display: "flex",
     justifyContent: "space-around",
@@ -276,19 +269,8 @@ const styles = StyleSheet.create({
     alignItems: "left",
     paddingLeft: "5vw",
     paddingTop: "5vw",
-  },
-  tituloartbold: {
-    marginLeft: "3vw",
-    fontWeight: "bold",
-  },
-  tituloh1: {
-    color: "#622FAE",
-    fontWeight: "bold",
-    fontSize: 36,
-    paddingLeft: 50,
-    textAlign: "left",
-  },
-  txtgoogle: {
+  }, 
+   txtgoogle: {
     fontSize: 16,
 
     marginLeft: 100,

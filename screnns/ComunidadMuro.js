@@ -14,6 +14,7 @@ import React, {  useState } from "react";
 import logo from "../assets/logo.png";
 import { data2 } from "../constants/barmenu2";
 import { datanotif } from "../constants/datanotif";
+import { data3 } from "../constants/barmenu3";
 import  link1  from  "../assets/bell.png";
 import  link2  from  "../assets/Ellipse.png";
 import  link3  from  "../assets/menu.png";
@@ -35,12 +36,19 @@ import logo1 from "../assets/logos_stripe.png";
 import logo2 from "../assets/logo_paypal.png";
 import logo3 from "../assets/logos_google-pay.png";
 import logo4 from "../assets/pay.png";
-
+import candimg from "../assets/solar_feed-outline.png";
+import candimg2 from "../assets/users2.png";
+import candimg3 from "../assets/user-plus.png";
+import imgpersona from "../assets/fotoprinc.png";
+import { muro1 } from "../constants/muro1";
+import link from "../assets/link2.png";
+import barraslices from "../assets/barraslices.png";
+import Postsocial from "../components/Postsocial";
 
 
 const { width } = Dimensions.get("window");
 
-const AjustesCobrar = () => {
+const CommunityWall = () => {
 
   
   const [modalVisible, setModalVisible] = React.useState(false);
@@ -55,7 +63,7 @@ const AjustesCobrar = () => {
         resizeMode="cover"
         style={{ width: 24, height: 24 }}
       />
-      {([3, 4, 5, 6].includes(item.id)) && (
+      {([3].includes(item.id)) && (
         <ImageBackground
           source={dos}
           resizeMode="cover"
@@ -84,6 +92,7 @@ const AjustesCobrar = () => {
 
   
   
+
 
   return (
     <ScrollView>
@@ -150,7 +159,7 @@ const AjustesCobrar = () => {
             
               <FlatList
                 
-                data={data2}
+                data={data3}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id.toString()}
               />
@@ -199,240 +208,70 @@ style={styles.bell14}
 </View>
 
             </View>
-            <View style={styles.seccion2}>
-            <View style={{ flex: 1 }}>
-              <FlatList
-                data={datanotif}
-                renderItem={renderItem2}
-                keyExtractor={(item) => item.id.toString()}
-              />
-            </View>
-
-            
-
-            </View>
+           
             <View style={styles.seccion3}>
             
-              <Text style={styles.labeltxt}>Editar</Text>
-              <ImageBackground
 
-              source={credidcard2}
-              resizeMode="cover"
-              style={styles.bell20}
-              />
-                     
-              <ImageBackground
+            
+            <View style={styles.comunidad}>
 
-              source={credidcard}
-              resizeMode="cover"
-              style={styles.bell19}
-              />
-               
-
-                      
-<View style={{marginTop: 130, display: 'flex', justifyContent: 'left', flexDirection: 'row',}}>
-                          
-                          <Textos txt="Titular de la tarjeta" style={styles.labeltxtmin}/>
-                          <Textos txt="Número de la tarjeta" style={styles.labeltxtmin}/>
-                         
-                          </View>
-                          <View style={{marginTop: 15, display: 'flex', justifyContent: 'left', flexDirection: 'row',}}>
-                                      
-                                   <Entradatxt pholder="Andrew Boston" style={styles.entrada}/>
-                                   <Entradatxt pholder="**** **** **** 3282 " style={styles.entrada}/>
-                          </View>
-
-                          
-                          
-
-                          <View style={{marginTop: 40, display: 'flex', justifyContent: 'left', flexDirection: 'row',}}>
-                          
-                          <Textos txt="Fecha de vencimiento" style={styles.labeltxtmin}/>
-                          <Textos txt="Código de seguridad" style={styles.labeltxtmin}/>
-
-                          </View>
-                        <View style={{marginTop: 15, display: 'flex', justifyContent: 'left', flexDirection: 'row',}}>
-                                      
-                                   <Entradatxt pholder="12/33" style={styles.entrada}/>
-                                   <Entradatxt pholder="***" style={styles.entrada}/>
-                          </View>
-   
-                          <View style={styles.containers}>
-      <Modal
-        animationType="slide"
-        transparent={true} 
-        visible={modalVisible}
-        onRequestClose={() => {
-          setModalVisible(!modalVisible);
-        }}
-      >
-        <View style={styles.modalBackground}>
-          <View style={styles.modalContainer}>
-            <Text style={styles.modalTitle}>Agregar método de pago</Text>
-<View style={styles.viewstile}>
-            <View style={styles.tarje1}>
-            <ImageBackground
-
-              source={tarje}
-              resizeMode="cover"
-              style={styles.bell23}
               
-              />
-              <Textos txt="Tarjeta de Débito" style={styles.txtestilo}></Textos>
-              </View>
-              <View style={styles.tarje2}>
-              <ImageBackground
-
-              source={tarje}
-              resizeMode="cover"
-              style={styles.bell23}
-              
-              />
-              <Textos txt="Tarjeta de Crédito" style={styles.txtestilo}></Textos>
-              </View>
-              </View>
-              <View style={styles.viewstile2}>
-
+              <View style={styles.slice1}>
              
-
               <ImageBackground
 
-              source={logo1}
-              resizeMode="cover"
-              style={styles.bell22}
-
-              />
-
-     
-
-              <ImageBackground
-
-                            source={logo2}
-                            resizeMode="cover"
-                            style={styles.bell22}
-                            
-                            />
-
-
-              <ImageBackground
-
-              source={logo3}
-              resizeMode="cover"
-              style={styles.bell22}
-
-              />
-
-              <ImageBackground
-
-                            source={logo4}
-                            resizeMode="cover"
-                            style={styles.bell22}
-                            
-                            />
-
-
-              
+source={candimg}
+resizeMode="cover"
+style={styles.bell14}
+>
+<View></View>
+</ImageBackground>
+<Text>Comunidad</Text>
+                    
 
               </View>
-            <TouchableOpacity 
-              style={styles.closeButton} 
-              onPress={() => setModalVisible(false)}>
-              <Text style={styles.closeButtonText}>Cerrar</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
+              <View style={styles.slice2}>
 
-      <TouchableOpacity style={styles.btnCancel} onPress={() => setModalVisible2(true)}>
-        <Text style={styles.text1}>Cancelar</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.btnSave} onPress={() => setModalVisible(true)}>
-        <Text style={styles.text}>Guardar cambios</Text>
-      </TouchableOpacity>
-    </View>
-
-
-
-    <View style={styles.containers}>
-      <Modal
-        animationType="slide"
-        transparent={true} 
-        visible={modalVisible2}
-        onRequestClose={() => {
-          setModalVisible2(!modalVisible2);
-        }}
-      >
-        <View style={styles.modalBackground}>
-          <View style={styles.modalContainer2}>
-            <Text style={styles.modalTitle}>Cargar datos</Text>
-<View style={styles.viewstile}>
-            
-              </View>
-              <View style={styles.viewstile2}>
               <ImageBackground
 
-source={credidcard2}
+source={candimg2}
 resizeMode="cover"
-style={styles.bell20}
-/>
-       
-<ImageBackground
+style={styles.bell14}
+>
+<View></View>
+</ImageBackground>
+<Text>Personas</Text>
+                    
 
-source={credidcard}
+              </View>
+              <View style={styles.slice3}>
+
+              <ImageBackground
+
+source={candimg3}
 resizeMode="cover"
-style={styles.bell192}
-/>
- 
+style={styles.bell14}
+>
+<View></View>
+</ImageBackground>
+<Text>Solicitudes</Text>
+                    
 
-        
-<View style={{display: 'flex', position: 'relative', left: '-42vw', top: '4vw',  justifyContent: 'left', flexDirection: 'column',}}>
-            
-            <Textos txt="Titular de la tarjeta" style={styles.labeltxtmin}/>
-            
-            <Entradatxt pholder="Andrew Boston" style={styles.entrada}/>
-            
-            </View>
-            <View style={{ display: 'flex', position: 'relative', left: '-42vw', top: '4vw', justifyContent: 'left', flexDirection: 'column'}}>
-                        
-            <Textos txt="Número de la tarjeta" style={styles.labeltxtmin}/>         
-            <Entradatxt pholder="**** **** **** 3282 " style={styles.entrada}/>
+              </View>
+              </View>
 
-               </View> 
+              <View style={styles.alturaheight2}>
+            {muro1.map((term, index) => (
+              <View key={term.id}>
 
-            <View style={{ display: 'flex', position: 'relative', left: '-92vw', top: '10vw', justifyContent: 'left', flexDirection: 'column',}}>
-                          
-             <Textos txt="Fecha de vencimiento" style={styles.labeltxtmin}/>
-            <Entradatxt pholder="12/33" style={styles.entrada}/>
-                          
+               <Postsocial iditem={term.id} contenido={term.contenido} subtitle={term.subtitle} subtitulo={term.subtitulo} titulosub1={term.titulosub1} instacomen={term.instacomen} instacount={term.instacount} imginsta={term.imginsta} imgframe={term.imgframe} id={term.id} txtlinl={term.txtlinl} image={term.image} fotopersonal={term.fotopersonal} title={term.title} redsocial={term.social} time={term.time}/>                           
+               
+                 
           
-
-            </View>
-            <View style={{display: 'flex', position: 'relative', left: '-92vw', top: '10vw', justifyContent: 'left', flexDirection: 'column',}}>
-                                      
-              <Textos txt="Código de seguridad" style={styles.labeltxtmin}/>         
-              <Entradatxt pholder="***" style={styles.entrada}/>
-              
-            </View>
-            
-           
+                
               </View>
-
-              <TouchableOpacity style={styles.btnGuardar}>
-        <Text style={styles.text}>Guardar cambios</Text>
-      </TouchableOpacity>
-
-
-            <TouchableOpacity 
-              style={styles.closeButton} 
-              onPress={() => setModalVisible2(false)}>
-              <Text style={styles.closeButtonText}>Cerrar</Text>
-            </TouchableOpacity>
+            ))}
           </View>
-        </View>
-      </Modal>
-
-    
-    </View>
 
 
             </View>
@@ -455,7 +294,7 @@ style={styles.bell192}
   );
 };
 
-export default AjustesCobrar;
+export default CommunityWall;
 
 const styles = StyleSheet.create({
   header: {
@@ -466,6 +305,85 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     flexDirection: "row",
   },   
+  titulosub1css1:{
+    color: "#1F184B",
+    position: 'relative',
+    top: '1.2vw',
+  },
+  titulosub1css:{
+    color: "#1F184B",
+    fontWeight: 'bold',
+    marginTop: '3vw',
+    fontSize: 16
+  },
+  titulosub1css:{
+    color: "#1F184B",
+    fontWeight: 'bold',
+    marginTop: '3vw',
+    fontSize: 16
+  },
+  
+  instacountcss:{
+    color: "#1F184B",
+    position: 'relative',
+    left: '2vw',
+    top: '0.5vw',
+  },
+  instacountcss2:{
+    color: "#1F184B",
+    position: 'relative',
+    left: '90%',
+    top: '-2.5vw',
+  },
+  boldTextsocial:{
+    color: "#C3C3C3",
+  },
+  boldTexttime:{
+    color: "#C3C3C3",
+    position: 'relative',
+    left: '80%',
+    top: '-1vw',
+  },
+  boldTextbol:{
+    color: "#622FAE",
+    fontWeight: 'bold',
+  },
+  titulosub1css2:{
+    color: "#1F184B",
+    
+    fontSize: 13,
+  },
+  titulouso:{
+    color: '#18204B',
+  },
+  comunidad:{
+    display: 'flex',
+    justifyContent: 'left',
+    alignItems: 'center',
+    flexDirection: 'row',
+    width: '70.71vw',
+    height: 43,
+    marginLeft: '3vw',
+    
+  },
+  txtlink:{
+    color: '#1F184B',
+    fontWeight: 'bold',
+     position: 'relative',
+     top: '-1vw',
+  },
+  slice1:{
+      width: '10.83vw',
+      height: 43,
+  },
+  slice2:{
+    width: '10.83vw',
+    height: 43,
+  },
+  slice3:{
+  width: '10.83vw',
+  height: 43,
+  },
   containers: {
     flex: 1,
     justifyContent: 'center',
@@ -654,9 +572,36 @@ const styles = StyleSheet.create({
     width: 25,
     height: 32,
     top: '-2vw',
-
     borderRadius: '2vw',
   },
+  bellframe: {
+    position: 'relative',    
+    left: '0vw',
+    marginRight: '1vw',
+    width: '65.59vw',
+    height: 197,
+    paddingTop: 50,
+    paddingBottom: 50,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center', 
+    backgroundColor: "#F6F6F6",
+    
+    top: '1vw',
+  },  
+  bellframe4: {
+    position: 'relative',    
+    left: '0vw',
+    marginRight: '1vw',
+    width: '65.59vw',
+    height: 394,
+    paddingTop: 50,
+    paddingBottom: 50,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center', 
+    backgroundColor: "#F6F6F6",
+    
+    top: '1vw',
+  },  
   bell22: {
     position: 'relative',    
     left: '-15vw',
@@ -671,6 +616,30 @@ const styles = StyleSheet.create({
     
     top: '1vw',
   },
+  imginstacss: {
+    position: 'relative',    
+    left: '0vw',
+    marginRight: '1vw',
+    width: 18,
+    height: 16,        
+    backgroundSize: 'cover',
+    backgroundPosition: 'center', 
+    backgroundColor: "#F6F6F6",
+    
+    top: '2vw',
+  },
+  imginstacss2: {
+    position: 'relative',    
+    left: '60vw',
+    marginRight: '1vw',
+    width: 18,
+    height: 18,        
+    backgroundSize: 'cover',
+    backgroundPosition: 'center', 
+    backgroundColor: "#F6F6F6",
+    
+    top: '-1vw',
+  },
   img: {
     maxHeight: '100%', // Asegúrate de que la imagen no sobrepase el contenedor
     maxWidth: '100%', // Asegúrate de que la imagen no sobrepase el contenedor
@@ -682,6 +651,14 @@ const styles = StyleSheet.create({
     height: 46,
     top: '0vw',    
     borderRadius: '2vw',
+  },
+  bell25:{
+    position: 'relative',
+    left: '-2.5vw',
+    width: 26,
+    height: 26,
+    top: '0.5vw',    
+    
   },
    labeltxt:{
     color: "#1F184B",
@@ -760,12 +737,21 @@ bell9:{
 },
 bell14:{
   width: 24,
-  height: 24, 
+  height: 25, 
+  position: 'relative',
+  paddingLeft: 30,
+  paddingRight: 0,
+  top: 30,
+  left: -30,
+},
+bell24:{
+  width: 46,
+  height: 45, 
   position: 'relative',
   paddingLeft: 30,
   paddingRight: 0,
   top: 20,
-  left: -30,
+  left: 0,
 },
 vistacont:{
 position: 'relative',
@@ -784,11 +770,7 @@ left: 40,
     marginLeft:  width < 750 ? '14vw' : '3vw',
     
   },
-  seccion2:{
  
-    width: width < 750 ? "100%" : "20%",    
-    marginLeft:  width < 750 ? '14vw' : '3vw',
-  },
   seccionconten:{
     display: 'flex',
     justifyContent: 'left',
@@ -809,12 +791,7 @@ left: 40,
     
     
    
-  },
-  seccion3:{
-    height: '70vw',  
-    width: width < 750 ? "100%" : "65%",
-    marginLeft:  width < 750 ? '14vw' : '3vw',
-  }, 
+  },  
   padre: {
     flex: 1,
     justifyContent: "center",
@@ -833,6 +810,15 @@ left: 40,
     height: '50vw',
     width: '100%',
   },   
+  alturaheight2: {
+    
+    display: 'flex',
+    flexDirection: width < 750 ? 'column' : 'column',
+    justifyContent: 'left',
+    paddingLeft: '5vw',
+    height: '50vw',
+    width: '100%',
+  },
   logo: {
     height: "4vw",
     width: "18vw",

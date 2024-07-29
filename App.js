@@ -22,12 +22,18 @@ import AjustesCobros from "./screnns/AjustesCobros";
 import AjustesPrecios from "./screnns/AjustesPrecios";
 import AjustesNotificacionesTodo from "./screnns/AjustesNotificacionesTodo";
 import AjustesCobrar from "./screnns/AjustesCobrar";
+import Search from "./screnns/Search";
+import CommunityWall from "./screnns/ComunidadMuro";
+import Comunitypersons from "./screnns/Comunitypersons";
+import Comunitypersonsfollow from "./screnns/Comunitypersonsfollow";
+import ComunitySolicit from "./screnns/Comunitysolicit";
+import HomeWallet from "./screnns/HomeWallet";
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <AjustesCobrar />
+      <HomeWallet />
       <StatusBar style="auto" />
     </View>
   );

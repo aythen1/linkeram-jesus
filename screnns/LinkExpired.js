@@ -13,36 +13,15 @@ import React, { useState } from "react";
 import logoimg from "../assets/logo.png";
 import presentacion from "../assets/presentacion.png";
 import imgcorreo from "../assets/correo.png";
-import eye from "../assets/eye.png";
-import capchadivimg from "../assets/capcha.png";
 import imgvolver from "../assets/arrow-left.png";
 import { datamenu } from "../constants/datamenu";
 
 const { width } = Dimensions.get("window");
 
 const LinkExpired = () => {
-  const [selectedValue, setSelectedValue] = useState("");
+  
 
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-
-  const toggleShowPassword = () => {
-    setShowPassword(!showPassword);
-  };
-
-  const [password2, setPassword2] = useState("");
-  const [showPassword2, setShowPassword2] = useState(false);
-
-  const toggleShowPassword2 = () => {
-    setShowPassword2(!showPassword2);
-  };
-
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheck = () => {
-    setIsChecked(!isChecked);
-  };
-
+  
   return (
     <ScrollView>
       <View style={styles.contenedor}>
@@ -136,25 +115,7 @@ const styles = StyleSheet.create({
     position: "relative",
     top: 10,
   },
-  capchadiv: {
-    borderWidth: 1,
-    borderColor: "#CCCCCC",
-    height: 50,
-    width: "25vw",
-    paddingStart: 30,
-    justifyContent: "center",
-    borderStyle: "dashed",
-    borderRadius: 5,
-    padding: 20,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginRight: 50,
-    marginLeft: 50,
-    marginTop: 10,
-    paddingTop: 5,
-    placeholderTextColor: "#C3C3C3",
-  },
-  logo: {
+   logo: {
     height: 36,
     width: 180,
     justifyContent: "center",

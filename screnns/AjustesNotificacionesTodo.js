@@ -13,53 +13,24 @@ import {
 } from "react-native";
 import React, {  useState } from "react";
 import logo from "../assets/logo.png";
-import link from "../assets/link.png";
-import { ayudas } from "../constants/ayuda";
-import { datamenu } from "../constants/datamenu";
-import { data } from "../constants/barmenu";
 import { data2 } from "../constants/barmenu2";
-import { datanotif } from "../constants/datanotif";
 import  link1  from  "../assets/bell.png";
 import  link2  from  "../assets/Ellipse.png";
 import  link3  from  "../assets/menu.png";
-import  link4  from  "../assets/menu.png";
 import  crearbtn  from  "../assets/crearbtn.png";
-import bgimg from "../assets/Ellipsef.png";
 import Textos from "../components/Textos";
-import Entradatxt from "../components/Entradatxt";
-import bgimginsta from '../assets/instagram.png';
-import bginfo from '../assets/info.png';
-import verf from '../assets/iconverde.png';
-import toggle from '../assets/ggle.png';
-import eye from "../assets/eye.png";
-import vatar from "../assets/vatar.png"; 
 import switchd from "../assets/ajustes.png";
 import cand from "../assets/settings.png";
 import cand2 from "../assets/power.png";
-import tglee from "../assets/ggle.png";
-import tglee2 from "../assets/ggle2.png";
-import Toogle from "../components/Toggle";
-import Toogleon from "../components/Toggleon";
 import dos from "../assets/dos.png";
-
-import imgtarjeta from "../assets/credito.png";
-import imgtarjeta12 from "../assets/credito.png";
-import imgtarjeta13 from "../assets/credit2.png";
-import imgtarjeta14 from "../assets/credit3.png";
-import imgtarjetaedit from "../assets/edit-3.png"
-import imgtarjetasav from "../assets/trash-2.png"
-import { CarouselSlider } from "react-native-carousel-image-slider";
-import mousepunt from "../assets/mousemov.png";
-import stripe from "../assets/stripe.png";
 import homelog from "../assets/homelog.png";
-import mas from "../assets/plus-circle.png";
 import tableHead from "../constants/datanotif";
 import Listados2 from "../components/Listados2";
 import leidosimg from "../assets/sector.png";
 
 const { width } = Dimensions.get("window");
 
-const AjustesPrivacidad = () => {
+const AjustesNotificacionesTodo = () => {
 
   
   const renderItem = ({ item }) => {
@@ -83,20 +54,7 @@ const AjustesPrivacidad = () => {
   };
 
   
-  const renderItem2 = ({ item }) => {
-    return (
-      
-         <View>             
-        <Text style={styles.nombre}>{item.name}</Text>
-        <Text style={styles.subtitulo}>{item.subtitle}</Text>
-        <ImageBackground
-              source={item.image}
-              resizeMode="cover"
-              style={{ width: 24, height: 24, position: 'relative', top: '-1.1vw' }}
-            />
-      </View>
-    );
-  };
+ 
 
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -296,7 +254,7 @@ style={styles.bell14}
   );
 };
 
-export default AjustesPrivacidad;
+export default AjustesNotificacionesTodo;
 
 const styles = StyleSheet.create({
   header: {
@@ -306,15 +264,7 @@ const styles = StyleSheet.create({
 
     justifyContent: "space-between",
     flexDirection: "row",
-  }, 
-    bell10:{
-    position: 'relative',
-    top: 6,
-    width: 32,
-    height: 32,
-    left: '35vw',
-    borderRadius: '2vw',
-  },           
+  },              
    labeltxtp2:{
     color: "#1F184B",
     fontSize: 16,
@@ -363,77 +313,7 @@ const styles = StyleSheet.create({
  
    marginTop: 10,    
    paddingLeft: 3,
- },
-  bell15:{
-    position: 'relative',
-    top: 6,
-    width: 32,
-    height: 32,
-    left: '46vw',
-    borderRadius: '2vw',
-  },     
-  bell16:{
-    position: 'relative',
-    top: -20,
-    width: 22,
-    height: 22,
-    left: '49vw',
-    borderRadius: '2vw',
-  },       
-  bell17:{
-    position: 'relative',
-    top: 40,
-    width: 22,
-    height: 22,
-    left: '39vw',
-    borderRadius: '2vw',
-  },   
-  estiloscont2: {
-    
-    padding: 0,
-    margin: 0,
-    width: '60vw',
-},
-box: {
-    margin: 10, 
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 5,
-},
-  bell11:{
-    position: 'relative',
-    left: '36vw',
-    width: 22,
-    height: 22,
-    top: 8,
-    borderRadius: '2vw',
-  },
-  bell12:{
-    position: 'relative',
-    left: '0vw',
-    width: 405,
-    height: 251,
-    top: 8,
-    borderRadius: '2vw',
-  },
-  bell13:{
-    position: 'relative',
-    
-    width: 44,
-    height: 44,
-    top: 160,
-    left: '47vw',
-    borderRadius: '2vw',
-    zIndex: 100,
-  },  
-  bell18:{
-    position: 'relative',
-    left: '-25vw',
-    width: 405,
-    height: 251,
-    top: 30,
-    borderRadius: '2vw',
-  },
+ }, 
    labeltxt:{
     color: "#1F184B",
     fontSize: 18,
@@ -465,39 +345,13 @@ box: {
     top: '-2vw',
     left: '12vw',
     
-  },labeltxtp34:{
-    color: "#1F184B",
-    fontSize: 16,
-
-    textAlign: 'left',
-    width: '35vw',
-    fontWeight: 'bold',
-    position: 'relative',
-    top: '-3.5vw',
-    left: '42vw',
-    
-  },         
-  estiloscont:{
-   display: 'flex',  
-   height: '5vw', 
-   justifyContent: 'left',
-   flexDirection: 'row',
-  },
+  }, 
     nombre:{
     position: 'relative',
     top: '1vw',        
     left: '3vw',
   },
-  subtitulo:{
-    
-    color: "#cccccc",
-    position: 'relative',
-    top: '1vw',
-    left: 40,
-
-    
-  },
-  txtcrear:{
+    txtcrear:{
     color: "#622FAE",
     fontWeight: 'bold',
     marginBottom: 30,
@@ -540,15 +394,6 @@ bell8:{
   top: 0,
   left: -10,
 },
-bell9:{
-  width: "80%",
-  height: "15vw", 
-  position: 'relative',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: 50,
-  left: -150,
-},
 bell14:{
   width: 24,
   height: 24, 
@@ -574,12 +419,7 @@ left: 40,
     width: width < 750 ? "100%" : "20%",
     marginLeft:  width < 750 ? '14vw' : '3vw',
     
-  },
-  seccion2:{
- 
-    width: width < 750 ? "100%" : "20%",    
-    marginLeft:  width < 750 ? '14vw' : '3vw',
-  },
+  },  
   seccionconten:{
     display: 'flex',
     justifyContent: 'left',
