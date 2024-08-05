@@ -187,6 +187,9 @@ style={styles.bell2}
 >
 <View></View>
 </ImageBackground><Text style={styles.txtcrear}> Crear </Text></TouchableOpacity>
+<Text style={styles.txt}> Vea su descripción general dentro de los últimos 30 días o más </Text>
+
+
 
 <View style={styles.vistacont}>
 <Text>12GB de 15GB usados</Text>
@@ -219,175 +222,27 @@ style={styles.bell14}
             <View style={styles.seccion3}>
             
              
-            <View style={styles.comunidad}>
-
-              
-<View style={styles.slice1}>
-
-<ImageBackground
-
-source={candimg}
-resizeMode="cover"
-style={styles.bell14}
->
-<View></View>
-</ImageBackground>
-<Text>Comunidad</Text>
-      
-
-</View>
-<View style={styles.slice2}>
-
-<ImageBackground
-
-source={candimg2}
-resizeMode="cover"
-style={styles.bell14}
->
-<View></View>
-</ImageBackground>
-<Text>Personas</Text>
-      
-
-</View>
-<View style={styles.slice3}>
-
-<ImageBackground
-
-source={candimg3}
-resizeMode="cover"
-style={styles.bell14}
->
-<View></View>
-</ImageBackground>
-<Text>Solicitudes</Text>
-      
-
-</View>
-
-
-</View>
-    <View style={styles.elementos}>
-      <View style={styles.elementosuno}>
-        <TouchableOpacity style={styles.button}>
-          <ImageBackground
-            source={candimg4}
-            resizeMode="cover"
-            style={styles.image}
-          >
-            <Text style={styles.buttonText1}>Mis elementos</Text>
-          </ImageBackground>
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.elementosdos}>
-        <TouchableOpacity style={styles.button}>
-          <ImageBackground
-            source={candimg5}
-            resizeMode="cover"
-            style={styles.image}
-          >
-            <Text style={styles.buttonText}>Monedero</Text>
-          </ImageBackground>
-        </TouchableOpacity>
-      </View>
-    </View>
-
-    <TouchableOpacity style={styles.boton}>
-    <Text style={styles.buttonText}>Retirar saldo de la cuenta</Text>
-    </TouchableOpacity>
-    <Text style={styles.buttonText2}>Saldo de la cuenta <Text style={styles.buttonText3}>356.06 $</Text></Text>
-    
-          <View style={styles.grafico}>
-          <ImageBackground
-            source={graficoimg}
-            resizeMode="cover"
-            style={styles.imagengrafico}
-          />
-          <View style={styles.stadistic}><View style={styles.fig}>40K</View> <View style={styles.fig}>30K</View> <View style={styles.fig}>20K</View> <View style={styles.fig}>10K</View></View>
-          <View style={styles.stadistic}><View style={styles.figura1}>
-            <ImageBackground
-            source={figuno}
-            resizeMode="cover"
-            style={styles.figura1}
-          /></View> 
-          <View ><ImageBackground
-            source={figdos}
-            resizeMode="cover"
-            style={styles.figura2}
-          /></View>
-           <View >
-           <ImageBackground
-            source={figtres}
-            resizeMode="cover"
-            style={styles.figura3}
-          />
-            </View> 
-            <View ><ImageBackground
-            source={figcuatro}
-            resizeMode="cover"
-            style={styles.figura4}
-          /></View>
-           <View ><ImageBackground
-            source={figcinco}
-            resizeMode="cover"
-            style={styles.figura5}
-          /></View>
-          </View>
-
-
-          </View>
-    
-          <View style={styles.seccionconten}>
-              
-          <Text style={styles.labeltxtp22vent}>Historial de ventas</Text>
-          <Text style={styles.labeltxtp2}>Historial de compras</Text>
-              
-              <TouchableOpacity style={styles.figura6}>
-      <ImageBackground
-        source={csv}
-        resizeMode="cover"
-        style={styles.imgfigura6}
-      />
-      <Text style={styles.textoBoton}>Exportar registro en CSV</Text>
-    </TouchableOpacity>
-
-           </View>
+         <Text style={styles.txtcrear}>Analíticas</Text>
     
 
-           <View style={styles.seccionconten}>
-              
-              <Text style={styles.labeltxtp22x}>Usuario</Text>
-              <Text style={styles.labeltxtp22}>Campo</Text>
-              <Text style={styles.labeltxtp22}>Fecha</Text>
-              <Text style={styles.labeltxtp22}>Método de pago</Text>
-              <Text style={styles.labeltxtp22}>Saldo</Text>
-                  
-                      
-           </View>
-                
+         <View>
+ 
+            <View>
 
-           <View style={styles.contenedorseccion2}>
-          <FlatList
-            data={datamenu2}
-            horizontal={false}
-            renderItem={({ item }) => (
-              <View style={{ height: 40 }}>
-                <ImageBackground
-                  source ={item.fotopersonal}
-                  resizeMode="cover"
-                  style={styles.imgfigura6}
-                /> 
-                 <Text style={styles.txtnombre}>{item.nombre}</Text>
-                 <Text style={styles.txtcampo}>{item.campo}</Text>
-                 <Text style={styles.txtfecha}>{item.fecha}</Text>
-                 <Text style={styles.txtmetpago}>{item.metpago}</Text>
-                 <Text style={styles.labeltxtp22saldo}>{item.saldo}</Text>
-              </View>
-            )}
-            keyExtractor={(item) => item.id.toString()}
-          />
-        </View>
+          
+            </View>
+            <View>
+
+          
+            </View>
+            <View>
+
+          
+            </View>
+
+         </View>
+
+
         <View style={{ marginTop: -280, marginLeft: 200 }}>
               <FlatList
                 data={pageNumbers}
@@ -1062,6 +917,17 @@ borderBottomWidth: 1,
     position: 'relative',
     top: '-1.1vw',
     left: 50,
+    fontSize: 20,
+    
+  },
+  txt:{
+    color: "#cccccc",    
+    marginBottom: '-10vw',
+    paddingBottom: 10,
+    top: '-23vw',
+    left: '20vw',
+    width: '40vw',
+    fontSize: 16,
     
   },
   crearboton:{

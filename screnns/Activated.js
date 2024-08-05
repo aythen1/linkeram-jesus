@@ -120,6 +120,16 @@ const styles = StyleSheet.create({
     marginTop: "0vw",
     position: "relative",
     top: 10,
+  },  
+  elementxt: {
+    height: 40,
+    width: 200,
+    backgroundColor: "#F5F5F5",
+    borderWidth: 0,
+    borderRadius: 10,
+    paddingStart: 20,
+    marginRight: 50,
+    marginTop: 10,
   },
   vistaflx: {
     display: "flex",

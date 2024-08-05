@@ -28,13 +28,18 @@ import Comunitypersons from "./screnns/Comunitypersons";
 import Comunitypersonsfollow from "./screnns/Comunitypersonsfollow";
 import ComunitySolicit from "./screnns/Comunitysolicit";
 import HomeWallet from "./screnns/HomeWallet";
+import Landingpage from "./screnns/Landingpage";
+import Anulated from "./screnns/Anulated";
+import Landingpagenew from "./screnns/Landingpagenew";
+import ElementoCreados from "./screnns/ElementosCreados";
+import AnaliticasProfesionales from "./screnns/AnaliticasProfesionales";
 
 
 export default function App() {
   return (
     <View style={styles.container}>
       <HomeWallet />
-      <StatusBar style="auto" />
+       
     </View>
   );
 }

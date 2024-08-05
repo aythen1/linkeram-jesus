@@ -16,6 +16,10 @@ import link from "../assets/link.png";
 import { data } from "../constants/barmenu";
 import { data2 } from "../constants/barmenu2";
 import { data3 } from "../constants/barmenu3";
+import { data4 } from "../constants/barmenu4";
+import { data5 } from "../constants/barmenu5";
+import { data6 } from "../constants/barmenu6";
+import { data7 } from "../constants/barmenu7";
 import  link1  from  "../assets/bell.png";
 import  link2  from  "../assets/Ellipse.png";
 import  link3  from  "../assets/menu.png";
@@ -31,27 +35,27 @@ import mas from "../assets/plus-circle.png";
 import lupa from "../assets/search.png";
 import { userslist } from "../constants/userslist";
 import { userslistdos } from "../constants/userslist2";
-import { userslisttres } from "../constants/userslist3";
 import candimg from "../assets/solar_feed-outline.png";
 import candimg2 from "../assets/users2.png";
 import candimg3 from "../assets/user-plus.png";
 import imageseguidos from "../assets/barraseguidos.png";
 import imgseg from "../assets/user-check.png";
 import imgseg2 from "../assets/user-checkmor.png";
-import candimg4 from "../assets/rocket-svgrepo-com 1.png";
 import candimg5 from "../assets/monedero.png";
-import graficoimg from "../assets/graficocharts.png";
-import figuno from "../assets/letra1.png";
-import figdos from "../assets/letra2.png";
-import figtres from "../assets/letra3.png";
-import figcuatro from "../assets/letra4.png";
-import figcinco from "../assets/letra5.png";
-import csv from "../assets/csv-light.png";
-import { datamenu2 } from "../constants/datamenu2";
+import candimg6 from "../assets/menu.png";
+import candimg7 from "../assets/mas.png";
+import candimg8 from "../assets/buscar.png";
+import candimg9 from "../assets/filter.png";
+import candimg4 from "../assets/rocket-svgrepo-com 1.png";
+import dos1 from "../assets/awardfr.png";
+import dos2 from "../assets/more-vertical.png";
+import linked from "../assets/linkend.png";
+import Componentes from "../components/Componentes";
+
 
 const { width } = Dimensions.get("window");
 
-const HomeWallet = () => {
+const ElementosCreados = () => {
 
   
   
@@ -67,13 +71,7 @@ const HomeWallet = () => {
         resizeMode="cover"
         style={{ width: 24, height: 24 }}
       />
-      {([3].includes(item.id)) && (
-        <ImageBackground
-          source={dos}
-          resizeMode="cover"
-          style={{ width: 20, height: 20, position: 'absolute', left: '14vw',top:'1vw' }}
-        />
-      )}
+      
     </View>
     );
   };
@@ -106,6 +104,14 @@ const HomeWallet = () => {
   };
 
   const pageNumbers = Array.from(Array(totalPages).keys()).map((x) => x + 1);
+
+
+  const miLista = [
+    {id: 'a', valor: 'Elemento 1'},
+    {id: 'b', valor: 'Elemento 2'},
+   
+  ];
+
 
   
 
@@ -222,52 +228,7 @@ style={styles.bell14}
             <View style={styles.comunidad}>
 
               
-<View style={styles.slice1}>
-
-<ImageBackground
-
-source={candimg}
-resizeMode="cover"
-style={styles.bell14}
->
-<View></View>
-</ImageBackground>
-<Text>Comunidad</Text>
-      
-
-</View>
-<View style={styles.slice2}>
-
-<ImageBackground
-
-source={candimg2}
-resizeMode="cover"
-style={styles.bell14}
->
-<View></View>
-</ImageBackground>
-<Text>Personas</Text>
-      
-
-</View>
-<View style={styles.slice3}>
-
-<ImageBackground
-
-source={candimg3}
-resizeMode="cover"
-style={styles.bell14}
->
-<View></View>
-</ImageBackground>
-<Text>Solicitudes</Text>
-      
-
-</View>
-
-
-</View>
-    <View style={styles.elementos}>
+            <View style={styles.elementos}>
       <View style={styles.elementosuno}>
         <TouchableOpacity style={styles.button}>
           <ImageBackground
@@ -293,132 +254,174 @@ style={styles.bell14}
       </View>
     </View>
 
-    <TouchableOpacity style={styles.boton}>
-    <Text style={styles.buttonText}>Retirar saldo de la cuenta</Text>
-    </TouchableOpacity>
-    <Text style={styles.buttonText2}>Saldo de la cuenta <Text style={styles.buttonText3}>356.06 $</Text></Text>
-    
-          <View style={styles.grafico}>
-          <ImageBackground
-            source={graficoimg}
-            resizeMode="cover"
-            style={styles.imagengrafico}
-          />
-          <View style={styles.stadistic}><View style={styles.fig}>40K</View> <View style={styles.fig}>30K</View> <View style={styles.fig}>20K</View> <View style={styles.fig}>10K</View></View>
-          <View style={styles.stadistic}><View style={styles.figura1}>
-            <ImageBackground
-            source={figuno}
-            resizeMode="cover"
-            style={styles.figura1}
-          /></View> 
-          <View ><ImageBackground
-            source={figdos}
-            resizeMode="cover"
-            style={styles.figura2}
-          /></View>
-           <View >
-           <ImageBackground
-            source={figtres}
-            resizeMode="cover"
-            style={styles.figura3}
-          />
-            </View> 
-            <View ><ImageBackground
-            source={figcuatro}
-            resizeMode="cover"
-            style={styles.figura4}
-          /></View>
-           <View ><ImageBackground
-            source={figcinco}
-            resizeMode="cover"
-            style={styles.figura5}
-          /></View>
-          </View>
+    <View style={styles.elementos}>
+      <View style={styles.elementosuno}>
 
-
-          </View>
-    
-          <View style={styles.seccionconten}>
-              
-          <Text style={styles.labeltxtp22vent}>Historial de ventas</Text>
-          <Text style={styles.labeltxtp2}>Historial de compras</Text>
-              
-              <TouchableOpacity style={styles.figura6}>
+      
       <ImageBackground
-        source={csv}
-        resizeMode="cover"
-        style={styles.imgfigura6}
-      />
-      <Text style={styles.textoBoton}>Exportar registro en CSV</Text>
-    </TouchableOpacity>
-
-           </View>
-    
-
-           <View style={styles.seccionconten}>
-              
-              <Text style={styles.labeltxtp22x}>Usuario</Text>
-              <Text style={styles.labeltxtp22}>Campo</Text>
-              <Text style={styles.labeltxtp22}>Fecha</Text>
-              <Text style={styles.labeltxtp22}>Método de pago</Text>
-              <Text style={styles.labeltxtp22}>Saldo</Text>
-                  
-                      
-           </View>
-                
-
-           <View style={styles.contenedorseccion2}>
-          <FlatList
-            data={datamenu2}
-            horizontal={false}
-            renderItem={({ item }) => (
-              <View style={{ height: 40 }}>
-                <ImageBackground
-                  source ={item.fotopersonal}
-                  resizeMode="cover"
-                  style={styles.imgfigura6}
-                /> 
-                 <Text style={styles.txtnombre}>{item.nombre}</Text>
-                 <Text style={styles.txtcampo}>{item.campo}</Text>
-                 <Text style={styles.txtfecha}>{item.fecha}</Text>
-                 <Text style={styles.txtmetpago}>{item.metpago}</Text>
-                 <Text style={styles.labeltxtp22saldo}>{item.saldo}</Text>
-              </View>
-            )}
-            keyExtractor={(item) => item.id.toString()}
+            source={candimg6}
+            resizeMode="cover"
+            style={styles.image1}
           />
-        </View>
-        <View style={{ marginTop: -280, marginLeft: 200 }}>
-              <FlatList
-                data={pageNumbers}
-                renderItem={renderPageNumber}
-                keyExtractor={(item) => item.toString()}
-                horizontal={true}
-                ListHeaderComponent={() => (
-                  <View style={{ marginHorizontal: 10 }}>
-                    <Text>«</Text>
-                  </View>
-                )}
-                ListFooterComponent={() => (
-                  <View style={{ marginHorizontal: 10 }}>
-                    <Text>»</Text>
-                  </View>
-                )}
-              />
-            </View>
-           
+          <ImageBackground
+            source={candimg7}
+            resizeMode="cover"
+            style={styles.image3}
+          />
+      </View>
+
+      <View style={styles.elementosdos}>
+       
+      <ImageBackground
+            source={candimg8}
+            resizeMode="cover"
+            style={styles.image4}
+          />
+ 
+        <ImageBackground
+            source={candimg9}
+            resizeMode="cover"
+            style={styles.image5}
+          />
+          
+      </View>
+
+      
+      <TextInput placeholder="Search" style={styles.seacr}/>
+      
+    </View>
+       
+
 
     
+
+
+    
+
+</View>
+
+
+
+
+
+
             <View>
 
+
+
+            <View style={styles.imagecont}>
+        <View style={styles.imagecont1}>
+          
+        <FlatList
+                
+                data={data4}
+                renderItem={renderItem}
+                keyExtractor={(item) => item.id.toString()}
+              />
+         <Text style={styles.imagecont2}>Mis Elementos</Text> 
+
+           <FlatList
+                
+                data={data5}
+                renderItem={renderItem}
+                keyExtractor={(item) => item.id.toString()}
+              />
+
+
+        <View>   </View>
+
+        <Text style={styles.imagecont3}></Text> 
+
+
+        <FlatList
+                        
+                        data={data6}
+                        renderItem={renderItem}
+                        keyExtractor={(item) => item.id.toString()}
+                      />
+        
+        <Text style={styles.imagecont3}></Text> 
+
+        <FlatList
+                        
+                        data={data7}
+                        renderItem={renderItem}
+                        keyExtractor={(item) => item.id.toString()}
+                      />
+
+        </View>
+
+
+        
+        
+    </View>
+      
+
+    
+
+              
+    
+           
           </View>
 
 
+         
+
+
+            
+
+            
           
 
             </View>
-   
-          
+            
+
+            <View style={styles.imagecont}>
+            <View style={styles.imagecont41}>                  
+             <Componentes/>
+            </View>          
+            <View style={styles.imagecont42}>                  
+             <Componentes/>
+            </View>
+            <View style={styles.imagecont43}>                  
+              <Componentes img="../assets/framelogo.png"/>
+            </View>  
+            <View style={styles.imagecont44}>                  
+              <Componentes img="../assets/autologin.png"/>
+            </View>
+            <View style={styles.imagecont45}>                  
+              <Componentes img="../assets/nubeaut.png"/>
+            </View>
+            <View style={styles.imagecont46}>                  
+              <Componentes img="../assets/nubeaut.png"/>
+            </View>
+            <View style={styles.imagecont47}>                  
+              <Componentes img="../assets/mapa.png"/>
+            </View>
+            <View style={styles.imagecont48}>                  
+              <Componentes img="../assets/musicamp3.png"/>
+            </View>
+            <View style={styles.imagecont49}>                  
+              <Componentes img="../assets/repro.png"/>
+            </View>
+            <View style={styles.imagecont50}>                  
+              <Componentes img="../assets/framrepro.png"/>
+            </View>
+            <View style={styles.imagecont51}>                  
+              <Componentes img="../assets/framrepro.png"/>
+            </View>
+
+
+            
+            </View>
+
+
+
+           
+
+
+           
+
             </View>
 
             
@@ -436,7 +439,7 @@ style={styles.bell14}
   );
 };
 
-export default HomeWallet;
+export default ElementosCreados;
 
 
 const styles = StyleSheet.create({
@@ -447,210 +450,223 @@ const styles = StyleSheet.create({
 
     justifyContent: "space-between",
     flexDirection: "row",
+  },     
+  imagecont2:{
+    color: '#413258',
+    fontWeight: 'bold',
+    fontSize: 16,
+    
+  },        
+  imagecont3:{
+    color: '#413258',
+    fontWeight: 'bold',
+    fontSize: 16,
+    height: 25,
   },   
-  labeltxtp2:{
-    padding: 0,
-    color: "#1F184B",
-    height: 40,
-    paddingLeft: 15,
-    paddingBottom: 20,
-  },    
-  txtnombre:{
-    position: 'relative',
-    left: '3vw',
-  },
-  txtcampo:{
-    position: 'relative',
-    left: '20vw',
-    top: '-1.5vw',
-  },
-  txtfecha:{
-    position: 'relative',
-    left: '33vw',
-    top: '-3vw',
-  },
-  txtmetpago:{
-    position: 'relative',
-    left: '45vw',
-    top: '-4.2vw',
-  },
-  txtsaldo:{
-    position: 'relative',
-    left: '120vw',
-    top: '-6vw',
-  },
-  contenedorseccion2: {
-    height: "100%",
-    width: "80vw",
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "row",
-    textAlign: "center",
-    position: 'relative',
-    top: '20vw',
-  }, 
-  labeltxtp22:{
-    padding: 10,
-    color: "#1F184B",
-    fontWeight: 'bold',
-    paddingLeft: 120,
-    
-  },
-  labeltxtp22x:{
-    padding: 10,
-    color: "#1F184B",
-    fontWeight: 'bold',
-    paddingLeft: 40,
-    
-  },
-  labeltxtp22vent:{
-    
-    color: "#1F184B",
-    fontWeight: 'bold',
-    height: 30,
-    borderBottomWidth: 1,
-    
-  },
-  labeltxtp22saldo:{
-    padding: 10,
-    color: "#1F184B",
-    fontWeight: 'bold',
-    paddingLeft: '77%',
-    marginTop: -80,
-  },  
-  seccionconten:{
-    display: 'flex',
-    justifyContent: 'left',
+  imageRow: {
+    width: "100%",
+    backgroundColor: "#000000",
     flexDirection: 'row',
-    width: "65vw",  
-          
-    marginTop: '3vw',
-    position: 'relative',
-    top: '20vw',
-  },  
-  stadistic:{
-   width: '50vw',
-   flexDirection: 'column',
-   height: 50,   
-   position: 'relative',
-   left: '95%',
-   padding: 10,
+    justifyContent: 'space-between',
+    marginBottom: 10, // Espacio entre filas
   },
-  figura1:{
-   position: 'relative',
-   left: '-31vw',
-   top: '9vw',
-   width: 175,
-   height: 49,
-  },
-  figura2:{
-    position: 'relative',
-    left: '-47vw',
-    top: '14vw',
-    width: 175,
-    height: 49,
-   },
-   figura3:{
-    position: 'relative',
-    left: '-32vw',
-    top: '10vw',
-    width: 175,
-    height: 49,
-   },
-   figura4:{
-    position: 'relative',
-    left: '-17vw',
-    top: '6vw',
-    width: 175,
-    height: 49,
-   },
-   figura5:{
-    position: 'relative',
-    left: '-3vw',
-    top: '2vw',
-    width: 175,
-    height: 49,
-   },
-   figura6: {
-    borderWidth: 1,          
-    borderColor: '#622FAE',   
-    borderRadius: 10,         
-    padding: 10,          
-    width: '20vw',    
-    alignItems: 'center',     
-    justifyContent: 'center',  
-    backgroundColor: 'white',  
-    margin: 10,      
-    position: 'relative',
-    left:'20vw',
-  },
-  imgfigura6: {
-    width: 30,
-    height: 30,
-    position: 'absolute',      
-    top: 5,
-    left: 0,
-    borderRadius: 10,         
-  },
-  textoBoton: {
-    color: '#622FAE',           
-    fontWeight: 'bold',       
-    zIndex: 1,                
-  },
-
-   
-   fig:{
-    paddingTop: 20,
-    paddingBottom: 20, 
-  },
-  boton:{
-    backgroundColor: "#622FAE",
-    width: "16.76vw",
-    borderRadius: 6,
-    position: 'relative',
-    left: '70%',
-    top: '4%',
-    cursor: "pointer",
-  },  
-  imagengrafico:{
-     width: '95%',
-  },
-  elementos:{
-    flexDirection: 'row', 
-    justifyContent: 'space-between', 
-    alignItems: 'center', 
-    padding: 10, 
-    
-    
-    
-    
-  },
-  elementosuno:{
-  flex: 1,
-  height: 40,
-  
-  },
-  image:{
-   position: 'relative',
-   top: 8,
-   left: 5,
-   
-  },
-  elementosdos:{
-   flex: 1,
-   backgroundColor: "#413258",
-   width: '100%',
-   flexDirection: 'column',
-   height: 40,
-   width: '80vw', 
-   
+  imagecont4: {
+    width: '100%',
   },
   buttonText1: {
     color: '#413258',
     fontSize: 16, 
     textAlign: 'center', 
-    padding: 5,
+    padding: 10,
+    position: 'relative',
+    top: '-1vw',
+  },      
+  imagecont:{
+    backgroundColor: "#000",
+    color: "#000",
     
+           
+  },
+  imagecont1:{
+    
+    width: '15%',    
+    position: 'relative',
+    left:'-3vw',
+    top: '5vw',
+  },   
+  imagecont4:{
+    
+    width: '100%',    
+    marginLeft: '-40vw',
+    marginTop: '10vw',
+    position: 'relative',
+    left: '15vw',
+    
+
+  },       
+  imagecont41:{
+    
+    width: '100%',    
+    marginLeft: '-70vw',
+    marginTop: '10vw',
+    position: 'relative',
+    left: '15vw',
+    
+
+  },             
+  imagecont42:{
+    
+    width: '100%',    
+    marginLeft: '-40vw',
+    marginTop: '0vw',
+    position: 'relative',
+    left: '15vw',
+    top: '-1.5vw',
+    
+
+  }, 
+  imagecont43: {
+    backgroundSize: 'auto',
+    width: '100%',
+    marginLeft: '-40vw',
+    marginTop: '0vw',
+    position: 'relative',
+    left: '-15vw',
+    top: '25vw',
+},   
+  imagecont44: {
+    backgroundSize: 'auto',
+    width: '100%',
+    marginLeft: '-40vw',
+    marginTop: '0vw',
+    position: 'relative',
+    left: '15vw',
+    top: '23vw',
+},  
+imagecont45: {
+  backgroundSize: 'auto',
+  width: '100%',
+  marginLeft: '-70vw',
+  marginTop: '0vw',
+  position: 'relative',
+  left: '15vw',
+  top: '50vw',
+},   
+imagecont46: {
+  backgroundSize: 'auto',
+  width: '100%',
+  marginLeft: '-70vw',
+  marginTop: '0vw',
+  position: 'relative',
+  left: '45vw',
+  top: '49vw',
+},     
+imagecont47: {
+  backgroundSize: 'auto',
+  width: '100%',
+  marginLeft: '-70vw',
+  marginTop: '0vw',
+  position: 'relative',
+  left: '15vw',
+  top: '75vw',
+}, 
+imagecont48: {
+  backgroundSize: 'auto',
+  width: '100%',
+  marginLeft: '-70vw',
+  marginTop: '0vw',
+  position: 'relative',
+  left: '45vw',
+  top: '73vw',
+},    
+imagecont49: {
+  backgroundSize: 'auto',
+  width: '100%',
+  marginLeft: '-70vw',
+  marginTop: '0vw',
+  position: 'relative',
+  left: '15vw',
+  top: '100vw',
+},      
+imagecont50: {
+  backgroundSize: 'auto',
+  width: '100%',
+  marginLeft: '-70vw',
+  marginTop: '0vw',
+  position: 'relative',
+  left: '45vw',
+  top: '99vw',
+},  
+imagecont51 : {
+  backgroundSize: 'auto',
+  width: '100%',
+  marginLeft: '-70vw',
+  marginTop: '0vw',
+  position: 'relative',
+  left: '45vw',
+  top: '99vw',
+},                                        
+  seacr:{
+    position: 'relative',
+    left:'-40vw',
+    top: '3.5vw',
+  },
+  imagecont:{
+    display: 'flex',
+  },
+  button:{
+     width: 500,
+     textAlign: 'center',
+     alignItems: 'center',
+     paddingBottom: '5vw',
+  },
+  image:{
+    position: 'relative',
+    left:'-5vw',
+    top: '1vw',
+    paddingLeft: 30,
+    paddingTop: 5,
+    paddingBottom: 30,
+  },  
+  image1:{
+    position: 'relative',
+    left:'-80vw',
+    top: '4vw',
+    paddingLeft: 30,
+    paddingTop: 5,
+    paddingBottom: 30,
+  },    
+  image2:{
+    position: 'relative',
+    left:'-42vw',
+    top: '1vw',
+    paddingLeft: 30,
+    paddingTop: 5,
+    paddingBottom: 30,
+  },      
+  image3:{
+    position: 'relative',
+    left:'-42vw',
+    top: '1vw',
+    paddingLeft: 30,
+    paddingTop: 5,
+    paddingBottom: 30,
+  },
+  image4:{
+    position: 'relative',
+    left:'-40vw',
+    top: '4vw',
+    paddingLeft: 30,
+    paddingTop: 5,
+    paddingBottom: 30,
+  },
+  image5:{
+    position: 'relative',
+    left:'-10vw',
+    top: '1.5vw',
+    paddingLeft: 30,
+    paddingTop: 5,
+    paddingBottom: 30,
   },
   buttonText2: {
     color: '#413258',
@@ -658,7 +674,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'left', 
     padding: 5,
-    width: '30vw',
+    position: 'relative',
+    top: '- 0.5vw',
   },
   buttonText3: {
     color: '#622FAE',
@@ -667,47 +684,32 @@ const styles = StyleSheet.create({
     textAlign: 'left', 
     padding: 5,
   },
-  buttonText: {
-    color: '#fff',
-    fontSize: 16, 
-    textAlign: 'center', 
+    elementos:{
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    alignItems: 'center', 
+    padding: 10, 
+  },
+  elementosuno:{
+    flex: 1,
+    height: 40,
+  },
+  elementosdos:{
+   flex: 1,
+   backgroundColor: "#413258",
+   width: '100%',
+   flexDirection: 'column',
+   height: 40,
+  },
+    buttonText2: {
+    color: '#413258',
+    fontSize: 20, 
+    fontWeight: 'bold',
+    textAlign: 'left', 
     padding: 5,
-    
-  },
-  txtrechazar:{
-    color: "#413258",
-    borderColor: "#413258",
-    width: '6.8vw',
-    height: 29,
-    borderWidth: 2,
-    borderRadius: 6,
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 10,
-    padding: '0.7vw',
-    fontWeight: 'bold',
-    position: 'relative',
-    left: '-8vw',
-    top: '5vw',
-  },
-  txtaceptar:{
-    color: "#ffffff",
-    width: '6.8vw',
-    height: 29,
-    borderColor: "#413258",
-    backgroundColor: "#413258",
-    borderWidth: 2,
-    borderRadius: 6,
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 10,
-    fontWeight: 'bold',
-    position: 'relative',
-    left: '0vw',
-    top: '2.8vw',
   },
   imgleft1:{
-  
+    backgroundColor: "#FAFAFA",
     width: "12.81vw",
     height: 35,
     position: 'relative',
@@ -715,10 +717,9 @@ const styles = StyleSheet.create({
     top: '-7vw',
     display: 'flex',
     borderRadius: 6,
-    zIndex: 0,
   },   
   imgleft2:{
-    
+    backgroundColor: "#1F184B",
     width: "12.81vw",
     height: 35,
     position: 'relative',
@@ -726,7 +727,6 @@ const styles = StyleSheet.create({
     top: '-7vw',
     display: 'flex',
     borderRadius: 6,
-    zIndex: 0,
   },
   comunidad:{
     display: 'flex',
@@ -745,12 +745,11 @@ const styles = StyleSheet.create({
 slice2:{
   width: '13.83vw',
   height: 43,
- 
+  borderBottomWidth: 1,
 },
 slice3:{
 width: '13.83vw',
 height: 43,
-borderBottomWidth: 1,
 },
   subtituloart2: {
     marginLeft: "0.3vw",
@@ -980,8 +979,8 @@ borderBottomWidth: 1,
     top: '1vw',
   },
   img: {
-    maxHeight: '100%', 
-    maxWidth: '100%', 
+    maxHeight: '100%', // Asegúrate de que la imagen no sobrepase el contenedor
+    maxWidth: '100%', // Asegúrate de que la imagen no sobrepase el contenedor
   },
   bell23:{
     position: 'relative',
@@ -1108,18 +1107,6 @@ bell14:{
   top: 20,
   left: -30,
 },
-bell15:{
-  
-  width: 24,
-  height: 24, 
-  position: 'relative',
-  paddingLeft: 30,
-  paddingRight: 0,
-  top: -8,
-  left: 4,
-  
-},
-
 vistacont:{
 position: 'relative',
 top: width < 750 ? '2vw' : '20vw',

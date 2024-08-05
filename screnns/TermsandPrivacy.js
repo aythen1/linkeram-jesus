@@ -19,6 +19,14 @@ import { datamenu } from "../constants/datamenu";
 const { width } = Dimensions.get("window");
 
 const TermsandPrivacy = () => {
+  
+  
+      
+      window.onload = function() {
+        confirm("We use tre third party cookies in order to persoanlises your experience . Read our cookies policy");
+    };
+
+  
   return (
     <ScrollView>
       <View style={styles.contenedor}>
@@ -50,40 +58,12 @@ const TermsandPrivacy = () => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={styles.contenedorseccion1}>
-          <TextInput placeholder="Español (ES)" style={styles.txtinput} />
-        </View>
-        <View style={styles.contenedorseccion2}>
-          <FlatList
-            data={datamenu}
-            horizontal={true}
-            renderItem={({ item }) => (
-              <View style={{ height: 15 }}>
-                {item.id == "7" ? (
-                  <Text style={styles.tituloartbold}>{item.title}</Text>
-                ) : (
-                  <Text style={styles.tituloart}>{item.title}</Text>
-                )}
-              </View>
-            )}
-            keyExtractor={(item) => item.id.toString()}
-          />
-        </View>
+        
 
-        <View style={styles.logo}>
-          <ImageBackground
-            source={logo}
-            resizeMode="cover"
-            style={{ width: "100%", height: "100%" }}
-          >
-            <View></View>
-          </ImageBackground>
-        </View>
+        
       </View>
 
-      <View style={styles.correo}>
-        <Text style={styles.correobold}>info.linkeram@gmail.com</Text>
-      </View>
+      
       <View style={styles.padre}>
         <View style={styles.terminos}>
           <View style={styles.alturaheight}>
@@ -116,7 +96,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   contenedor: {
-    height: "65%",
+    height: "50%",
     width: "100vw",
     alignItems: "flex-start",
   },
